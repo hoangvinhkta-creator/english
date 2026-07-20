@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hành Trình IELTS 9.0 — Chặng 1: Ngữ pháp nền tảng</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F6F7F4;--ink:#17263B;--ink-soft:#4A5A70;--line:#DDE2DA;--sea:#0E7C86;--sea-deep:#0A5C64;--sea-tint:#E3F1F2;--gold:#C8912A;--gold-tint:#FBF3E2;--ok:#2E7D46;--ok-tint:#E6F4EA;--bad:#B4402F;--bad-tint:#FBEAE6;--radius:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7}
+h1,h2,h3,.brand{font-family:'Fraunces',serif}
+button{font-family:inherit;cursor:pointer}
+header{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-size:1.1rem;font-weight:700}.brand span{color:var(--gold)}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav button{background:transparent;border:1px solid rgba(255,255,255,.25);color:#fff;padding:6px 13px;border-radius:99px;font-size:.85rem}
+nav button.active{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:600}
+main{max-width:960px;margin:0 auto;padding:22px 16px 80px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin-bottom:16px}
+.eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--sea);font-weight:700;margin-bottom:6px}
+h2{font-size:1.45rem;margin-bottom:10px}
+h3{font-size:1.05rem;margin:16px 0 8px;color:var(--sea-deep)}
+p{margin-bottom:10px}ul{margin:0 0 10px 20px}li{margin-bottom:5px}
+.muted{color:var(--ink-soft);font-size:.9rem}
+.dial-wrap{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.dial{width:150px;height:150px;flex:none}
+.legend{flex:1;min-width:220px}
+.stage{border-left:4px solid var(--sea);padding-left:14px;margin-bottom:14px}
+.stage.locked{border-left-color:var(--line);opacity:.6}
+.pill{display:inline-block;background:var(--sea-tint);color:var(--sea-deep);padding:2px 10px;border-radius:99px;font-size:.75rem;font-weight:600;margin-right:6px}
+.pill.gold{background:var(--gold-tint);color:#8a6415}.pill.ok{background:var(--ok-tint);color:var(--ok)}
+.lesson-list button.lesson-item{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:8px;font-size:.95rem}
+.lesson-item:hover{border-color:var(--sea)}
+.lesson-item .done{float:right;color:var(--ok);font-weight:700}
+.tabs{display:flex;gap:6px;margin:14px 0;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);background:#fff;padding:6px 14px;border-radius:99px;font-size:.85rem}
+.tabs button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.example{background:var(--sea-tint);border-radius:10px;padding:12px 14px;margin:10px 0}
+.example b{color:var(--sea-deep)}
+.vi{color:var(--ink-soft);font-style:italic}
+.formula{background:var(--gold-tint);border-radius:10px;padding:12px 14px;margin:10px 0;font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:10px 0}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+th{background:var(--sea-tint);color:var(--sea-deep)}
+.q{border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px;background:#fff}
+.q .stem{font-weight:600;margin-bottom:8px}
+.opt{display:block;width:100%;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:9px 12px;margin-bottom:6px;font-size:.92rem}
+.opt.sel{border-color:var(--sea);background:var(--sea-tint)}
+.opt.right{border-color:var(--ok);background:var(--ok-tint)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-tint)}
+.expl{display:none;margin-top:8px;padding:10px 12px;border-radius:8px;background:var(--gold-tint);font-size:.88rem}
+.expl.show{display:block}.expl b{color:#8a6415}
+textarea{width:100%;min-height:90px;border:1px solid var(--line);border-radius:8px;padding:10px;font-family:inherit;font-size:.92rem;margin-bottom:8px}
+.model{display:none;margin-top:8px;padding:10px 12px;border-radius:8px;background:var(--sea-tint);font-size:.88rem}
+.model.show{display:block}
+.btn{background:var(--sea);color:#fff;border:none;padding:10px 20px;border-radius:99px;font-weight:600;font-size:.92rem}
+.btn.gold{background:var(--gold);color:var(--ink)}
+.btn.ghost{background:#fff;color:var(--sea);border:1px solid var(--sea)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.result{padding:16px;border-radius:10px;margin-top:12px;font-weight:600}
+.result.good{background:var(--ok-tint);color:var(--ok)}
+.result.mid{background:var(--gold-tint);color:#8a6415}
+.result.low{background:var(--bad-tint);color:var(--bad)}
+.weak{color:var(--bad);font-weight:600}.strong{color:var(--ok);font-weight:600}
+input[type=date],input[type=number]{padding:8px;border:1px solid var(--line);border-radius:8px}
+@media(max-width:600px){h2{font-size:1.25rem}.card{padding:14px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">IELTS <span>9.0</span> Journey</div>
+  <nav>
+    <button data-v="home" class="active" onclick="go('home')">Lộ trình</button>
+    <button data-v="lessons" onclick="go('lessons')">Bài học</button>
+    <button data-v="tests" onclick="go('tests')">Kiểm tra</button>
+    <button data-v="progress" onclick="go('progress')">Tiến độ</button>
+  </nav>
+</header>
+<main id="app"></main>
+<script>
+let memStore={};
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return memStore[k]??d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){memStore[k]=v}}};
+let progress=store.get('ielts_c1_progress',{scores:{},tests:{},essays:{}});
+function saveP(){store.set('ielts_c1_progress',progress)}
+const ROADMAP=[
+{n:"Chặng 1 · Ngữ pháp nền tảng A1",g:"to be, hiện tại đơn, tiếp diễn, danh từ, mạo từ, there is/are, sở hữu",open:true},
+{n:"Chặng 2 · Ngữ pháp A2",g:"quá khứ đơn, tương lai, so sánh, can/must, some/any",open:false},
+{n:"Chặng 3 · Ngữ pháp B1",g:"hoàn thành, bị động, mệnh đề quan hệ, điều kiện, gián tiếp",open:false},
+{n:"Chặng 4 · B2 + từ vựng học thuật",g:"câu phức, collocations, AWL, paraphrase",open:false},
+{n:"Chặng 5 · Kỹ năng IELTS",g:"chiến thuật Listening, Reading, Writing, Speaking",open:false},
+{n:"Chặng 6 · Tinh luyện 7.0 → 8.5",g:"đảo ngữ, cleft, hedging, sửa lỗi vi mô",open:false},
+{n:"Chặng 7 · Về đích 9.0",g:"thi thử định kỳ, phân tích lỗi, duy trì phong độ",open:false}];
+const LESSONS=[
+/* ============ BÀI 1 ============ */
+{id:"g1",title:"Bài 1 · Động từ TO BE (am / is / are) — câu khẳng định",
+theory:`<h3>1. TO BE là gì và vì sao học đầu tiên?</h3>
+<p>Trong tiếng Việt ta nói: "Tôi <b>là</b> nhân viên", "Cô ấy <b>thì</b> cao", "Họ <b>ở</b> Hà Nội". Tiếng Anh dùng chung MỘT động từ cho cả ba nghĩa đó: <b>to be</b> (là / thì / ở). Đây là động từ xuất hiện nhiều nhất trong tiếng Anh — hầu như câu giới thiệu bản thân nào cũng cần nó.</p>
+<h3>2. Chia to be theo chủ ngữ (BẮT BUỘC thuộc lòng)</h3>
+<table><tr><th>Chủ ngữ</th><th>To be</th><th>Ví dụ</th><th>Nghĩa</th></tr>
+<tr><td>I (tôi)</td><td><b>am</b></td><td>I am Hiệp.</td><td>Tôi là Hiệp.</td></tr>
+<tr><td>He / She / It (anh ấy / cô ấy / nó)</td><td><b>is</b></td><td>She is tall.</td><td>Cô ấy cao.</td></tr>
+<tr><td>You / We / They (bạn / chúng tôi / họ)</td><td><b>are</b></td><td>They are at home.</td><td>Họ ở nhà.</td></tr></table>
+<div class="formula">CÔNG THỨC: Chủ ngữ + am/is/are + (danh từ / tính từ / nơi chốn)</div>
+<p><b>Mẹo nhớ:</b> I đi với am (I am — "ai em"). Số ít (1 người/vật) → is. Số nhiều (2 trở lên) hoặc you → are.</p>
+<h3>3. Dạng viết tắt (người bản ngữ dùng hằng ngày)</h3>
+<p>I am = <b>I'm</b> · She is = <b>She's</b> · They are = <b>They're</b>. Khi nói và nhắn tin, dạng viết tắt là mặc định.</p>
+<h3>4. Ví dụ kèm giải thích chi tiết</h3>
+<div class="example"><b>I am a salesperson.</b><br><span class="vi">Tôi là nhân viên bán hàng. — "I" luôn đi với "am". Chú ý có "a" trước nghề nghiệp (học kỹ ở Bài 8).</span></div>
+<div class="example"><b>My phone is new.</b><br><span class="vi">Điện thoại của tôi (thì) mới. — "My phone" là 1 vật = it → dùng "is". Tiếng Việt không cần "thì" nhưng tiếng Anh BẮT BUỘC có "is" — thiếu nó câu sai hoàn toàn.</span></div>
+<div class="example"><b>Lan and Minh are my friends.</b><br><span class="vi">Lan và Minh là bạn của tôi. — 2 người = they → "are".</span></div>
+<p class="muted">⚠️ Lỗi số 1 của người Việt mới học: BỎ QUÊN to be, viết "She tall" thay vì "She is tall" — vì tiếng Việt nói "Cô ấy cao" không cần động từ. Hãy tự kiểm tra mọi câu: có động từ chưa?</p>`,
+levels:{
+basic:{mcq:[
+{q:"I ___ a student.",opts:["am","is","are","be"],a:0,why:"<b>Đúng: am.</b> 'I' LUÔN LUÔN đi với 'am' — không có ngoại lệ. 'is' cho he/she/it, 'are' cho you/we/they. 'be' là dạng nguyên mẫu, không đứng một mình sau I."},
+{q:"She ___ my sister.",opts:["am","is","are","be"],a:1,why:"<b>Đúng: is.</b> 'She' (cô ấy — 1 người, số ít) → is. 'am' chỉ dành cho I; 'are' dành cho số nhiều và you."},
+{q:"They ___ teachers.",opts:["am","is","are","be"],a:2,why:"<b>Đúng: are.</b> 'They' (họ — nhiều người) → are. Chú ý 'teachers' có 's' vì nhiều giáo viên (Bài 7 sẽ học kỹ)."},
+{q:"My father ___ 50 years old.",opts:["am","is","are","be"],a:1,why:"<b>Đúng: is.</b> 'My father' = 1 người đàn ông = he → is. Nói tuổi tiếng Anh dùng to be: 'is 50 years old', KHÔNG dùng 'has 50 years'."},
+{q:"You ___ very kind.",opts:["am","is","are","be"],a:2,why:"<b>Đúng: are.</b> 'You' luôn đi với 'are' — kể cả khi 'you' chỉ 1 người. Đây là điểm đặc biệt cần nhớ máy móc."}],
+writing:[{q:"Dịch 4 câu sau sang tiếng Anh: (1) Tôi là Hiệp. (2) Cô ấy là bác sĩ. (3) Chúng tôi ở Hà Nội. (4) Chiếc tivi này mới.",
+model:"<b>Đáp án:</b> (1) I am Hiệp. / I'm Hiệp. (2) She is a doctor. — nhớ 'a' trước nghề. (3) We are in Ha Noi. — 'ở' thành phố dùng 'in'. (4) This TV is new. — người Việt hay quên 'is' vì tiếng Việt nói 'tivi này mới' không có động từ. <br><b>Tự kiểm tra:</b> cả 4 câu của bạn đều có am/is/are chưa? Chia đúng theo chủ ngữ chưa?"}]},
+mid:{mcq:[
+{q:"My brother and I ___ at the store now.",opts:["am","is","are","be"],a:2,why:"<b>Đúng: are.</b> 'My brother and I' = 2 người = we → are. Bẫy: thấy chữ 'I' ở cuối chọn 'am' — nhưng chủ ngữ là CẢ CỤM 2 người."},
+{q:"The customers ___ happy with the new fridge.",opts:["is","are","am","be"],a:1,why:"<b>Đúng: are.</b> 'The customers' có 's' = nhiều khách = they → are. Luôn nhìn đuôi 's' của danh từ để biết số ít hay nhiều."},
+{q:"Điền dạng viết tắt đúng: '___ my best friend.' (He is)",opts:["Hes","He's","His","He're"],a:1,why:"<b>Đúng: He's.</b> He is → He's (dấu ' thay chữ i). 'His' là 'của anh ấy' — từ khác hoàn toàn. 'Hes' thiếu dấu phẩy trên là sai chính tả."},
+{q:"Câu nào ĐÚNG?",opts:["The water cold.","The water is cold.","The water are cold.","The water be cold."],a:1,why:"<b>Đúng: B.</b> 'The water' = it → is. Câu A là lỗi kinh điển của người Việt: bỏ quên to be ('Nước lạnh' dịch word-by-word). Câu C sai vì water không đếm được, coi là số ít."},
+{q:"It ___ hot today.",opts:["am","is","are","be"],a:1,why:"<b>Đúng: is.</b> Nói về thời tiết, tiếng Anh dùng chủ ngữ giả 'It': It is hot/cold/rainy. Không nói 'Today hot' hay 'Weather hot'."}],
+writing:[{q:"Viết 5 câu giới thiệu về bản thân và gia đình bạn, dùng đủ: am (1 câu), is (2 câu), are (2 câu).",
+model:"<b>Bài mẫu:</b> I am Hiệp. I am 28 years old. My father is a driver. My house is in Bac Ninh. My parents are very kind. My brother and I are close.<br><b>Tự kiểm tra:</b> (1) I → am? (2) 1 người/vật → is? (3) 2 người trở lên → are? (4) Không có câu nào THIẾU to be?"}]},
+adv:{mcq:[
+{q:"Everyone in my family ___ tall.",opts:["are","is","am","be"],a:1,why:"<b>Đúng: is.</b> Bẫy nâng cao: 'Everyone' (mọi người) nghe như số nhiều nhưng ngữ pháp tiếng Anh coi là SỐ ÍT → is. Tương tự: everybody, someone, nobody đều + is."},
+{q:"The news ___ good today.",opts:["are","is","am","be"],a:1,why:"<b>Đúng: is.</b> 'News' có 's' nhưng là danh từ KHÔNG ĐẾM ĐƯỢC, luôn số ít → is. Nhóm từ tương tự: mathematics, physics. Đừng máy móc 'thấy s là are'."},
+{q:"Ba câu sau, câu nào SAI? (1) I'm a engineer. (2) She's at work. (3) We're ready.",opts:["Câu 1","Câu 2","Câu 3","Không câu nào sai"],a:0,why:"<b>Đúng: câu 1 sai.</b> 'Engineer' bắt đầu bằng NGUYÊN ÂM /e/ → phải dùng 'an engineer'. Lỗi này không thuộc to be nhưng luôn đi kèm câu giới thiệu nghề nghiệp — sẽ học sâu ở Bài 8."},
+{q:"'Here ___ the reports you asked for.' (đây là các báo cáo anh cần)",opts:["am","is","are","be"],a:2,why:"<b>Đúng: are.</b> Câu đảo với 'Here/There' đầu câu: động từ chia theo danh từ ĐỨNG SAU — 'the reports' số nhiều → are. Nếu là 'Here is the report' (1 báo cáo) thì dùng is."},
+{q:"Trong IELTS Speaking Part 1, cách trả lời 'What's your job?' tự nhiên nhất:",opts:["Job is sale.","I sale.","I'm in charge of sales at an electronics store.","My job are sales."],a:2,why:"<b>Đúng: C.</b> 'I'm in charge of...' (tôi phụ trách...) — dùng to be viết tắt tự nhiên + mở rộng thông tin. A, D sai ngữ pháp; B dùng 'sale' như động từ (sai — động từ là 'sell'). Ngay từ bài 1, hãy tập trả lời thành CÂU ĐẦY ĐỦ."}],
+writing:[{q:"Viết đoạn 5–6 câu tự giới thiệu như trong IELTS Speaking Part 1 (tên, tuổi, quê, công việc, tính cách), dùng cả dạng đầy đủ và viết tắt của to be.",
+model:"<b>Bài mẫu:</b> My name is Hiệp, and I'm 28 years old. I'm from Bac Ninh, a province near Ha Noi. My job is quite interesting — I'm responsible for sales at an electronics store. My colleagues are friendly, and our store is always busy. I think I'm a careful and hard-working person.<br><b>Tự kiểm tra:</b> (1) Mỗi câu đều có to be chia đúng? (2) Có dùng cả 'is' và \"'m\" / \"'re\"? (3) Đọc to — có tự nhiên không?"}]}
+}},
+/* ============ BÀI 2 ============ */
+{id:"g2",title:"Bài 2 · TO BE — phủ định và câu hỏi",
+theory:`<h3>1. Câu phủ định: chỉ cần thêm NOT</h3>
+<div class="formula">Chủ ngữ + am/is/are + NOT + ...</div>
+<p>Đây là điểm dễ nhất của to be: muốn nói "không phải / không" chỉ việc đặt <b>not</b> ngay sau am/is/are.</p>
+<table><tr><th>Đầy đủ</th><th>Viết tắt</th><th>Nghĩa</th></tr>
+<tr><td>I am not tired.</td><td>I'm not tired.</td><td>Tôi không mệt.</td></tr>
+<tr><td>She is not here.</td><td>She <b>isn't</b> here.</td><td>Cô ấy không có ở đây.</td></tr>
+<tr><td>They are not ready.</td><td>They <b>aren't</b> ready.</td><td>Họ chưa sẵn sàng.</td></tr></table>
+<p class="muted">Lưu ý: "am not" KHÔNG có dạng viết tắt "amn't" — chỉ viết I'm not.</p>
+<h3>2. Câu hỏi Yes/No: ĐẢO to be lên đầu câu</h3>
+<div class="formula">Am/Is/Are + chủ ngữ + ... ?</div>
+<div class="example"><b>You are tired. → Are you tired?</b><br><span class="vi">Bạn mệt à? — chỉ cần đưa "are" lên trước "you". Không thêm bất cứ từ nào khác.</span></div>
+<p><b>Cách trả lời ngắn:</b> Yes, I am. / No, I'm not. · Yes, she is. / No, she isn't. — Trả lời "Yes" thì KHÔNG viết tắt (không nói "Yes, I'm").</p>
+<h3>3. Câu hỏi có từ để hỏi (Wh-)</h3>
+<div class="formula">Từ để hỏi + am/is/are + chủ ngữ ?</div>
+<table><tr><th>Từ hỏi</th><th>Nghĩa</th><th>Ví dụ</th></tr>
+<tr><td>What</td><td>cái gì</td><td>What is this? (Đây là cái gì?)</td></tr>
+<tr><td>Where</td><td>ở đâu</td><td>Where are you? (Bạn đang ở đâu?)</td></tr>
+<tr><td>Who</td><td>ai</td><td>Who is she? (Cô ấy là ai?)</td></tr>
+<tr><td>How</td><td>thế nào</td><td>How are you? (Bạn khỏe không?)</td></tr>
+<tr><td>How much</td><td>bao nhiêu (giá)</td><td>How much is this TV? (Tivi này giá bao nhiêu?)</td></tr></table>
+<p class="muted">⚠️ Lỗi hay gặp: giữ nguyên trật tự câu kể — hỏi "You are tired?" Người bản ngữ hiểu nhưng đó không phải câu hỏi đúng ngữ pháp. Phải ĐẢO: "Are you tired?"</p>`,
+levels:{
+basic:{mcq:[
+{q:"Chọn câu phủ định đúng của 'She is busy.'",opts:["She not busy.","She is not busy.","She don't busy.","Not she is busy."],a:1,why:"<b>Đúng: She is not busy (= She isn't busy).</b> Chỉ thêm 'not' sau 'is'. Câu A thiếu 'is'. Câu C dùng 'don't' — don't chỉ đi với động từ thường (Bài 4), KHÔNG BAO GIỜ đi với to be."},
+{q:"___ you a teacher?",opts:["Is","Are","Am","Be"],a:1,why:"<b>Đúng: Are.</b> Chủ ngữ 'you' → are, đảo lên đầu thành câu hỏi. 'Is you' sai vì is không đi với you."},
+{q:"Trả lời ngắn đúng cho 'Is he your boss?' — 'Yes, ___'",opts:["he's","he is","is he","he"],a:1,why:"<b>Đúng: Yes, he is.</b> Trả lời Yes dùng dạng ĐẦY ĐỦ, không viết tắt ('Yes, he's' nghe cụt và sai quy tắc). Viết tắt chỉ dùng khi trả lời No: 'No, he isn't.'"},
+{q:"I ___ not hungry.",opts:["am","is","are","do"],a:0,why:"<b>Đúng: am.</b> I + am not = I'm not. 'do not' chỉ dùng cho động từ thường, câu này 'hungry' là tính từ nên dùng to be."},
+{q:"___ is your name? — My name is Nam.",opts:["Who","What","Where","How"],a:1,why:"<b>Đúng: What.</b> Hỏi TÊN dùng 'What is your name?' (tên là 'cái gì'). 'Who' hỏi người ('Who is he?'). Đây là khác biệt với tiếng Việt — ta hỏi 'ai' nhưng tiếng Anh hỏi 'what'."}],
+writing:[{q:"Chuyển 3 câu sau thành (a) phủ định và (b) câu hỏi: (1) He is a driver. (2) They are at school. (3) The phone is expensive.",
+model:"<b>Đáp án:</b> (1a) He is not (isn't) a driver. (1b) Is he a driver? (2a) They are not (aren't) at school. (2b) Are they at school? (3a) The phone is not (isn't) expensive. (3b) Is the phone expensive?<br><b>Tự kiểm tra:</b> Phủ định — 'not' đứng NGAY SAU am/is/are? Câu hỏi — to be đứng TRƯỚC chủ ngữ và có dấu '?' cuối câu?"}]},
+mid:{mcq:[
+{q:"'___ the new air conditioners in stock?' — 'No, they ___.'",opts:["Is / isn't","Are / aren't","Are / isn't","Is / aren't"],a:1,why:"<b>Đúng: Are / aren't.</b> 'The new air conditioners' số nhiều → Are...? và trả lời No, they aren't. Hai vế phải THỐNG NHẤT cùng số nhiều."},
+{q:"Where ___ my keys? I can't find them.",opts:["is","are","am","be"],a:1,why:"<b>Đúng: are.</b> 'Keys' (những chiếc chìa khóa) số nhiều → are. Người Việt hay chọn 'is' vì nghĩ 'chùm chìa khóa' là 1 — nhưng tiếng Anh đếm từng chiếc: keys = they."},
+{q:"How much ___ this washing machine?",opts:["is","are","am","do"],a:0,why:"<b>Đúng: is.</b> Hỏi giá 1 món đồ: How much is + danh từ số ít. Nếu hỏi nhiều món: How much are these? 'do' dùng cho động từ thường — ở đây không có động từ thường nào."},
+{q:"Câu hỏi đúng cho câu trả lời 'She is in the warehouse.' là:",opts:["Where is she?","Who is she?","What is she?","How is she?"],a:0,why:"<b>Đúng: Where is she?</b> Trả lời về NƠI CHỐN (in the warehouse) → hỏi Where (ở đâu). Who hỏi danh tính, How hỏi tình trạng sức khỏe/cảm xúc."},
+{q:"Chọn câu SAI:",opts:["Why are you late?","Why you are late?","She isn't at home.","Am I right?"],a:1,why:"<b>Đúng (câu sai): B.</b> Câu hỏi Wh- vẫn phải ĐẢO to be lên trước chủ ngữ: 'Why ARE you late?'. Giữ trật tự 'you are' là lỗi phổ biến nhất khi người Việt đặt câu hỏi."}],
+writing:[{q:"Viết đoạn hội thoại ngắn 6 câu giữa bạn và một khách hàng: khách hỏi giá tivi, hỏi tivi có mới không, bạn trả lời (dùng ít nhất 2 câu hỏi với to be + 1 câu phủ định).",
+model:"<b>Bài mẫu:</b><br>Khách: How much is this TV?<br>Bạn: It's 15 million dong.<br>Khách: Is it new?<br>Bạn: Yes, it is. It's a 2026 model.<br>Khách: Is the delivery free?<br>Bạn: No, it isn't, but it's very cheap — only 100,000 dong.<br><b>Tự kiểm tra:</b> Câu hỏi có đảo to be lên đầu? Trả lời ngắn đúng dạng (Yes, it is / No, it isn't)?"}]},
+adv:{mcq:[
+{q:"'___ everything okay with your order?' — cách hỏi lịch sự khi chăm sóc khách hàng:",opts:["Are","Is","Am","Do"],a:1,why:"<b>Đúng: Is.</b> 'Everything' — giống everyone — luôn chia SỐ ÍT dù nghĩa là 'mọi thứ'. 'Is everything okay?' là câu cửa miệng dịch vụ khách hàng, đáng học thuộc nguyên câu."},
+{q:"Câu nào là câu hỏi ĐUÔI (tag question) đúng?",opts:["You are from Ha Noi, are you?","You are from Ha Noi, aren't you?","You are from Ha Noi, don't you?","You are from Ha Noi, you are?"],a:1,why:"<b>Đúng: B.</b> Quy tắc câu hỏi đuôi: vế trước KHẲNG ĐỊNH → đuôi PHỦ ĐỊNH (aren't you?). Câu C sai vì don't không đi với to be. Câu hỏi đuôi rất hay dùng trong Speaking để hỏi xác nhận một cách tự nhiên."},
+{q:"'Aren't you the new manager?' — câu hỏi phủ định này ngụ ý gì?",opts:["Người hỏi chắc chắn bạn KHÔNG phải quản lý","Người hỏi NGẠC NHIÊN hoặc muốn xác nhận điều họ tin là đúng","Câu này sai ngữ pháp","Người hỏi đang tức giận"],a:1,why:"<b>Đúng: B.</b> Câu hỏi phủ định (Aren't you...? / Isn't it...?) diễn tả sự ngạc nhiên hoặc mong xác nhận: 'Chẳng phải anh là quản lý mới sao?'. Sắc thái này quan trọng trong Listening — nghe được ngụ ý chứ không chỉ nghĩa đen."},
+{q:"Chọn câu tự nhiên nhất để hỏi cảm nhận khách sau khi mua hàng:",opts:["How is the new fridge working out for you?","How the new fridge?","What is about the new fridge?","The new fridge is how?"],a:0,why:"<b>Đúng: A.</b> 'How is X working out for you?' — mẫu câu hỏi thăm tự nhiên của bản ngữ. B thiếu động từ, C sai cấu trúc (đúng phải là 'What about...?'), D sai trật tự."},
+{q:"Trong Speaking, khi không nghe rõ câu hỏi, cách hỏi lại TỐT NHẤT:",opts:["What?","Again!","Sorry, could you repeat that? / I'm sorry, what was that?","You say what?"],a:2,why:"<b>Đúng: C.</b> Hỏi lại lịch sự bằng câu đầy đủ — được phép trong phòng thi IELTS và không bị trừ điểm. 'What?' cộc lốc bị coi là bất lịch sự; D sai ngữ pháp."}],
+writing:[{q:"Viết 6 câu hỏi bạn có thể dùng để phỏng vấn một người bạn về cuộc sống của họ (chỉ dùng to be, đủ: What, Where, Who, How, How old + 1 câu hỏi đuôi).",
+model:"<b>Bài mẫu:</b> What is your favourite food? / Where are you from? / Who is the most important person in your life? / How is your family? / How old are your parents? / You're happy with your job, aren't you?<br><b>Tự kiểm tra:</b> Mỗi câu: từ hỏi → to be → chủ ngữ, đúng trật tự? Câu đuôi: khẳng định + aren't you?"}]}
+}},
+/* ============ BÀI 3 ============ */
+{id:"g3",title:"Bài 3 · Hiện tại đơn — câu khẳng định (thói quen, sự thật)",
+theory:`<h3>1. Khi nào dùng thì hiện tại đơn?</h3>
+<p>Dùng cho: (a) <b>thói quen, việc làm thường xuyên</b> — I work every day (Tôi làm việc mỗi ngày); (b) <b>sự thật luôn đúng</b> — Water boils at 100°C (Nước sôi ở 100°C); (c) <b>sở thích, tình trạng</b> — I like coffee (Tôi thích cà phê).</p>
+<p><b>Khác với to be:</b> Bài 1–2 học to be (là/thì/ở). Bài này học ĐỘNG TỪ THƯỜNG — những động từ chỉ HÀNH ĐỘNG: work, eat, like, go, play, live...</p>
+<h3>2. Công thức — điểm mấu chốt là chữ "s"</h3>
+<div class="formula">I / You / We / They + động từ nguyên mẫu<br>He / She / It + động từ + <b>S</b></div>
+<table><tr><th>Chủ ngữ</th><th>Ví dụ</th><th>Nghĩa</th></tr>
+<tr><td>I / You / We / They</td><td>I work. They play.</td><td>Tôi làm việc. Họ chơi.</td></tr>
+<tr><td>He / She / It</td><td>He work<b>s</b>. She play<b>s</b>.</td><td>Anh ấy làm việc. Cô ấy chơi.</td></tr></table>
+<p><b>Quy tắc VÀNG:</b> Chủ ngữ là <b>he / she / it</b> (hoặc 1 người/vật thay được bằng he/she/it) → động từ PHẢI thêm <b>s</b>. Đây là lỗi bị mất điểm nhiều nhất, kể cả ở band 6.</p>
+<h3>3. Cách thêm s/es</h3>
+<table><tr><th>Trường hợp</th><th>Cách thêm</th><th>Ví dụ</th></tr>
+<tr><td>Đa số động từ</td><td>+ s</td><td>work → works, like → likes</td></tr>
+<tr><td>Tận cùng o, s, x, ch, sh</td><td>+ es</td><td>go → goes, watch → watches, fix → fixes</td></tr>
+<tr><td>Phụ âm + y</td><td>đổi y → ies</td><td>study → studies, fly → flies</td></tr>
+<tr><td>Nguyên âm + y</td><td>+ s (giữ y)</td><td>play → plays, buy → buys</td></tr></table>
+<h3>4. Ví dụ chi tiết</h3>
+<div class="example"><b>I sell electronics.</b><br><span class="vi">Tôi bán đồ điện tử. — 'I' → giữ nguyên 'sell', KHÔNG thêm s.</span></div>
+<div class="example"><b>My father drives a truck.</b><br><span class="vi">Bố tôi lái xe tải. — 'My father' = he → 'drive' thêm s = 'drives'.</span></div>
+<div class="example"><b>She watches TV every night.</b><br><span class="vi">Cô ấy xem tivi mỗi tối. — 'watch' tận cùng 'ch' → thêm 'es' = watches. 'every night' là dấu hiệu thói quen.</span></div>
+<p class="muted">⚠️ Dấu hiệu nhận biết thì hiện tại đơn: every day/week, usually, always, often, sometimes, never. Thấy các từ này → nghĩ ngay đến hiện tại đơn.</p>`,
+levels:{
+basic:{mcq:[
+{q:"I ___ in Bac Ninh.",opts:["live","lives","living","am live"],a:0,why:"<b>Đúng: live.</b> 'I' KHÔNG thêm s. 'lives' chỉ dùng cho he/she/it. 'am live' sai vì đã có động từ thường 'live' thì không cần to be."},
+{q:"He ___ coffee every morning.",opts:["drink","drinks","drinking","drinkes"],a:1,why:"<b>Đúng: drinks.</b> 'He' → động từ + s. 'drinkes' sai chính tả (drink chỉ thêm 's', không phải 'es' vì không tận cùng o/s/x/ch/sh)."},
+{q:"They ___ football on Sundays.",opts:["plays","play","playes","playing"],a:1,why:"<b>Đúng: play.</b> 'They' (số nhiều) → giữ nguyên. Bẫy: 'play' tận cùng 'y' nhưng trước y là NGUYÊN ÂM 'a' nên nếu cần thêm s thì là 'plays' (giữ y) — nhưng ở đây they nên không thêm gì."},
+{q:"My sister ___ English at a school.",opts:["teach","teachs","teaches","teachess"],a:2,why:"<b>Đúng: teaches.</b> 'My sister' = she → thêm s. 'teach' tận cùng 'ch' → thêm 'ES' = teaches, không phải 'teachs'."},
+{q:"We ___ TVs and fridges.",opts:["sell","sells","selling","sale"],a:0,why:"<b>Đúng: sell.</b> 'We' → nguyên mẫu. 'sale' là DANH TỪ (sự bán hàng), động từ là 'sell' — đừng nhầm."}],
+writing:[{q:"Viết 5 câu về thói quen hằng ngày của các thành viên gia đình bạn (mỗi câu 1 người khác nhau, chú ý thêm s với he/she).",
+model:"<b>Bài mẫu:</b> I get up at 6 a.m. My father drives to work. My mother cooks breakfast. My brother studies at university. My sister watches cartoons every evening.<br><b>Tự kiểm tra:</b> Câu nào chủ ngữ là he/she (father, mother, brother, sister) → động từ CÓ 's' chưa? drives, cooks, studies, watches — kiểm tra từng từ."}]},
+mid:{mcq:[
+{q:"The store ___ at 8 a.m. and ___ at 9 p.m.",opts:["open / close","opens / closes","opens / close","open / closes"],a:1,why:"<b>Đúng: opens / closes.</b> 'The store' = it → CẢ HAI động từ đều thêm s. Bẫy: nhớ thêm s cho động từ đầu nhưng quên động từ thứ hai. Khi 1 chủ ngữ có nhiều động từ, TẤT CẢ phải chia giống nhau."},
+{q:"My colleague ___ to fix problems quickly.",opts:["try","trys","tries","tryes"],a:2,why:"<b>Đúng: tries.</b> 'My colleague' = he/she → thêm s. 'try' = phụ âm 'r' + 'y' → đổi y thành 'ies' = tries. So sánh với 'play' (nguyên âm + y) giữ nguyên."},
+{q:"Water ___ at 100 degrees Celsius.",opts:["boil","boils","boiling","is boil"],a:1,why:"<b>Đúng: boils.</b> Sự thật hiển nhiên → hiện tại đơn. 'Water' = it → boils. Sự thật khoa học LUÔN dùng hiện tại đơn dù không phải 'thói quen'."},
+{q:"Câu nào ĐÚNG?",opts:["She go to work by bus.","She goes to work by bus.","She going to work by bus.","She gos to work by bus."],a:1,why:"<b>Đúng: B.</b> 'She' + go → 'go' tận cùng 'o' nên thêm 'ES' = goes. 'gos' sai chính tả; 'go' thiếu s; 'going' cần to be đứng trước."},
+{q:"Điền: My boss ___ every email he ___.",opts:["reads / receives","read / receive","reads / receive","read / receives"],a:0,why:"<b>Đúng: reads / receives.</b> 'My boss' = he → reads. 'he' (trong mệnh đề sau) → receives. Cả hai chủ ngữ đều số ít nên cả hai động từ đều thêm s."}],
+writing:[{q:"Viết đoạn 5–6 câu mô tả công việc hằng ngày của một đồng nghiệp (dùng 'he' hoặc 'she', ít nhất 4 động từ khác nhau có thêm s đúng cách).",
+model:"<b>Bài mẫu:</b> My colleague Vinh works in the sales team. Every morning, he checks the supplier prices and updates the system. He talks to customers politely and always tries to help them. In the afternoon, he processes orders and finishes his reports before 5 p.m.<br><b>Tự kiểm tra:</b> works, checks, updates, talks, tries, processes, finishes — mỗi động từ có s/es đúng quy tắc? 'tries' đổi y→ies, 'processes'/'finishes' thêm es sau s/sh."}]},
+adv:{mcq:[
+{q:"Everyone in the team ___ hard to meet the deadline.",opts:["work","works","working","are work"],a:1,why:"<b>Đúng: works.</b> 'Everyone' luôn số ít (như đã học ở Bài 1 với to be) → động từ thường cũng thêm s: works. Bẫy 'team' và 'everyone' nghe như nhiều người nhưng ngữ pháp là số ít."},
+{q:"'The company ___ customer data and ___ it to improve service.'",opts:["collect / use","collects / uses","collects / use","collect / uses"],a:1,why:"<b>Đúng: collects / uses.</b> 'The company' = it → cả hai động từ thêm s. Danh từ tập hợp (company, team, government) trong tiếng Anh-Mỹ coi là số ít → dùng s."},
+{q:"Chọn câu diễn đạt sự thật khoa học ở văn phong học thuật (chuẩn IELTS Writing):",opts:["Plants makes oxygen, you know.","Plants produce oxygen through photosynthesis.","Plants is producing oxygen.","Plant produce oxygen."],a:1,why:"<b>Đúng: B.</b> 'Plants' số nhiều → produce (không s). Từ vựng học thuật 'produce, photosynthesis' + không có 'you know' (văn nói). A sai vì plants số nhiều không thêm s vào động từ; D sai vì 'Plant' số ít cần 'produces'."},
+{q:"Trong 3 câu, câu nào SAI về chia động từ? (1) She rarely takes a day off. (2) The data shows a clear trend. (3) My parents lives in Hue.",opts:["Câu 1","Câu 2","Câu 3","Không có câu sai"],a:2,why:"<b>Đúng: câu 3 sai.</b> 'My parents' số nhiều (bố mẹ = 2 người) → 'live' KHÔNG thêm s. Người mới hay máy móc 'cứ chủ ngữ là thêm s' — nhưng s CHỈ dành cho số ít he/she/it."},
+{q:"'How often ___ your store ___ new stock?'",opts:["do / receives","does / receive","does / receives","do / receive"],a:1,why:"<b>Đúng: does / receive.</b> Đây là bài sau (câu hỏi hiện tại đơn) nhưng nguyên tắc: khi đã có 'does', động từ chính VỀ NGUYÊN MẪU (receive, không receives) — vì 's' đã 'chuyển' sang does. Ghi nhớ sớm để tránh lỗi 'does...receives'."}],
+writing:[{q:"Viết đoạn 6–7 câu (kiểu IELTS Speaking Part 1/2) mô tả một thói quen hằng ngày của bạn, dùng đủ trạng từ tần suất: always, usually, often, sometimes, rarely, never.",
+model:"<b>Bài mẫu:</b> I always wake up early because my job starts at eight. I usually check the supplier prices first, and I often compare them with the previous day. Sometimes I help my colleagues with their orders. I rarely take a lunch break longer than thirty minutes, and I never leave work before finishing my reports.<br><b>Tự kiểm tra:</b> (1) Trạng từ tần suất đứng TRƯỚC động từ thường (I always wake, not I wake always)? (2) Động từ chia đúng theo chủ ngữ 'I' (không thêm s)?"}]}
+}},
+/* ============ BÀI 4 ============ */
+{id:"g4",title:"Bài 4 · Hiện tại đơn — phủ định & câu hỏi (do / does)",
+theory:`<h3>1. Vấn đề: động từ thường KHÔNG tự phủ định được</h3>
+<p>Với to be, ta chỉ thêm 'not' (She is not). Nhưng động từ thường (work, like, go...) cần một "trợ thủ" gọi là <b>trợ động từ</b>: <b>do</b> và <b>does</b>.</p>
+<h3>2. Câu phủ định</h3>
+<div class="formula">I / You / We / They + <b>don't</b> + động từ nguyên mẫu<br>He / She / It + <b>doesn't</b> + động từ nguyên mẫu</div>
+<table><tr><th>Câu khẳng định</th><th>Câu phủ định</th></tr>
+<tr><td>I like tea.</td><td>I <b>don't</b> like tea.</td></tr>
+<tr><td>She works here.</td><td>She <b>doesn't work</b> here.</td></tr></table>
+<p><b>ĐIỂM CỰC KỲ QUAN TRỌNG:</b> Khi dùng doesn't, chữ 's' RỜI KHỎI động từ và chuyển vào 'does'. Viết "She doesn't works" là SAI — phải là "She doesn't work". Chỉ một chỗ được mang 's'.</p>
+<h3>3. Câu hỏi Yes/No</h3>
+<div class="formula"><b>Do</b> + I/you/we/they + động từ nguyên mẫu ?<br><b>Does</b> + he/she/it + động từ nguyên mẫu ?</div>
+<div class="example"><b>Do you like coffee?</b> — Yes, I do. / No, I don't.<br><span class="vi">Bạn thích cà phê không? — Trả lời ngắn dùng do/don't, KHÔNG lặp lại 'like'.</span></div>
+<div class="example"><b>Does she work here?</b> — Yes, she does. / No, she doesn't.<br><span class="vi">Chú ý: động từ là 'work' (nguyên mẫu), 's' nằm ở 'does'.</span></div>
+<h3>4. Câu hỏi Wh-</h3>
+<div class="formula">Từ hỏi + do/does + chủ ngữ + động từ nguyên mẫu ?</div>
+<div class="example"><b>Where do you work?</b> — I work at an electronics store.<br><span class="vi">Bạn làm việc ở đâu? — Where + do + you + work.</span></div>
+<div class="example"><b>What does he sell?</b> — He sells phones.<br><span class="vi">Anh ấy bán gì? — Câu hỏi dùng 'sell' (nguyên mẫu, s ở does), nhưng câu trả lời 'sells' (s trở lại vì không còn does).</span></div>
+<p class="muted">⚠️ Ba lỗi chết người: (1) "She don't..." → phải doesn't. (2) "Does she works?" → phải work. (3) "You like coffee?" thiếu Do → phải "Do you like coffee?".</p>`,
+levels:{
+basic:{mcq:[
+{q:"I ___ like durian.",opts:["don't","doesn't","not","am not"],a:0,why:"<b>Đúng: don't.</b> 'I' → don't. 'doesn't' chỉ cho he/she/it. 'am not' dùng cho to be, nhưng 'like' là động từ thường nên cần don't."},
+{q:"She ___ eat meat.",opts:["don't","doesn't","not","isn't"],a:1,why:"<b>Đúng: doesn't.</b> 'She' → doesn't + eat (nguyên mẫu). Lưu ý sau doesn't là 'eat' KHÔNG phải 'eats'."},
+{q:"___ you speak English?",opts:["Do","Does","Are","Is"],a:0,why:"<b>Đúng: Do.</b> 'you' → Do. 'speak' là động từ thường nên dùng do/does, không dùng are/is."},
+{q:"___ your father work on Saturdays?",opts:["Do","Does","Is","Are"],a:1,why:"<b>Đúng: Does.</b> 'Your father' = he → Does. Và động từ giữ nguyên 'work' (không works)."},
+{q:"Chọn câu ĐÚNG:",opts:["He doesn't works here.","He doesn't work here.","He don't work here.","He not work here."],a:1,why:"<b>Đúng: B.</b> doesn't + WORK (nguyên mẫu). A sai vì 'works' còn s (s đã ở does rồi). C sai trợ động từ (he cần does). D thiếu trợ động từ hoàn toàn."}],
+writing:[{q:"Viết 3 câu phủ định và 3 câu hỏi về thói quen (dùng cả do và does).",
+model:"<b>Bài mẫu — phủ định:</b> I don't drink coffee. My brother doesn't play sports. We don't work on Sundays.<br><b>Câu hỏi:</b> Do you live near here? Does your store sell laptops? What time do you start work?<br><b>Tự kiểm tra:</b> Phủ định — don't/doesn't + nguyên mẫu? Câu hỏi — Do/Does đầu câu + nguyên mẫu? Không có động từ nào thừa 's' sau do/does?"}]},
+mid:{mcq:[
+{q:"'___ your company deliver to other provinces?'",opts:["Do","Does","Is","Are"],a:1,why:"<b>Đúng: Does.</b> 'Your company' = it → Does + deliver (nguyên mẫu). Danh từ tập hợp company = số ít."},
+{q:"My parents ___ understand English, so I translate for them.",opts:["don't","doesn't","aren't","isn't"],a:0,why:"<b>Đúng: don't.</b> 'My parents' số nhiều → don't. Bẫy: nhiều người mới chọn doesn't vì 'quen thêm s' — nhưng số nhiều dùng don't."},
+{q:"What time ___ the store ___?",opts:["do / opens","does / open","does / opens","do / open"],a:1,why:"<b>Đúng: does / open.</b> 'The store' = it → does; động từ về nguyên mẫu 'open'. 'does...opens' là lỗi để 's' ở cả hai chỗ."},
+{q:"Câu hỏi đúng cho 'He sells air conditioners.' là:",opts:["What does he sells?","What does he sell?","What do he sell?","What he sells?"],a:1,why:"<b>Đúng: What does he sell?</b> he → does, động từ nguyên mẫu 'sell'. A để thừa s ở 'sells'; C sai trợ động từ (he cần does); D thiếu trợ động từ."},
+{q:"'She ___ coffee but she ___ tea.' (thích cà phê nhưng không thích trà)",opts:["likes / doesn't like","like / don't like","likes / don't like","like / doesn't likes"],a:0,why:"<b>Đúng: likes / doesn't like.</b> Câu khẳng định 'she' → likes (có s). Câu phủ định → doesn't + like (s chuyển sang does, động từ về nguyên mẫu). Một câu thể hiện cả hai quy tắc."}],
+writing:[{q:"Viết đoạn hội thoại 6 câu phỏng vấn xin việc: người phỏng vấn hỏi về kỹ năng và thói quen làm việc của ứng viên (dùng ít nhất 3 câu hỏi do/does và 1 câu phủ định).",
+model:"<b>Bài mẫu:</b><br>— Do you have experience in sales?<br>— Yes, I do. I work in electronics retail.<br>— Does your current job involve customer service?<br>— Yes, it does, but it doesn't involve online marketing.<br>— What skills do you want to improve?<br>— I want to improve my English and my data analysis.<br><b>Tự kiểm tra:</b> Do/Does đầu câu hỏi? Động từ sau do/does ở nguyên mẫu (have, involve, want)? Câu phủ định 'doesn't involve' đúng?"}]},
+adv:{mcq:[
+{q:"'Neither of the suppliers ___ free delivery.'",opts:["offer","offers","don't offer","are offer"],a:1,why:"<b>Đúng: offers.</b> 'Neither of...' luôn chia SỐ ÍT trong văn phong chuẩn → offers. Đây là điểm ngữ pháp band 7. (Văn nói đôi khi dùng số nhiều, nhưng IELTS Writing nên dùng số ít.)"},
+{q:"Chọn câu tự nhiên và đúng nhất cho IELTS Speaking:",opts:["I no like crowded places.","I don't really enjoy crowded places.","I doesn't like crowded places.","I not enjoy crowded places."],a:1,why:"<b>Đúng: B.</b> 'don't really enjoy' — phủ định đúng + 'really' làm nhẹ giọng tự nhiên + 'enjoy' phong phú hơn 'like'. A, D thiếu trợ động từ (lỗi dịch thẳng từ tiếng Việt 'tôi không thích'); C sai chủ ngữ-trợ động từ."},
+{q:"'___ it ever ___ you that the price might be wrong?' (Đã bao giờ bạn nghĩ rằng...)",opts:["Does / occur","Do / occurs","Does / occurs","Do / occur"],a:0,why:"<b>Đúng: Does / occur.</b> Chủ ngữ giả 'it' = số ít → Does; động từ nguyên mẫu 'occur'. Cấu trúc 'Does it occur to you that...' là mẫu câu nâng cao đáng học."},
+{q:"Trong câu 'Rarely does he complain about workload' — vì sao dùng 'does'?",opts:["Vì he là số ít nên luôn cần does","Vì trạng từ phủ định 'Rarely' đầu câu gây ĐẢO NGỮ, cần trợ động từ does","Vì đây là câu hỏi","Câu này sai ngữ pháp"],a:1,why:"<b>Đúng: B.</b> Khi 'Rarely/Seldom/Never' đứng đầu câu → đảo ngữ, mượn trợ động từ does + chủ ngữ + động từ nguyên mẫu. Đây là cấu trúc band 7+ (sẽ học sâu ở Chặng 6), nhưng nền tảng do/does bạn học hôm nay chính là gốc của nó."},
+{q:"Câu nào KHÔNG mắc lỗi?",opts:["Does your team meets every week?","Why does the machine stops suddenly?","Where does he keep the invoices?","Do she work here?"],a:2,why:"<b>Đúng: C.</b> 'Where does he keep...' — does + nguyên mẫu 'keep', đúng hoàn toàn. A thừa s ('meets'); B thừa s ('stops'); D sai trợ động từ (she cần does)."}],
+writing:[{q:"Viết 6 câu hỏi khảo sát khách hàng cho cửa hàng điện máy (dùng đa dạng do/does và các từ hỏi What/Where/How often/Why), sau đó tự trả lời 2 trong số đó.",
+model:"<b>Bài mẫu — câu hỏi:</b> How often do you buy electronics? What brand do you trust most? Does our price seem reasonable to you? Where do you usually shop for appliances? Why do you prefer online shopping? Do you want us to call you about promotions?<br><b>Trả lời mẫu:</b> I buy electronics once a year. I trust Samsung most.<br><b>Tự kiểm tra:</b> Mọi câu hỏi có do/does đúng ngôi và động từ nguyên mẫu theo sau? Từ hỏi đứng đầu, trợ động từ đứng thứ hai?"}]}
+}},
+/* ============ BÀI 5 ============ */
+{id:"g5",title:"Bài 5 · Hiện tại tiếp diễn (am/is/are + V-ing)",
+theory:`<h3>1. Khi nào dùng hiện tại tiếp diễn?</h3>
+<p>Diễn tả hành động đang xảy ra NGAY LÚC NÓI hoặc quanh thời điểm hiện tại: "Tôi <b>đang</b> làm việc", "Trời <b>đang</b> mưa". Dấu hiệu: <b>now, right now, at the moment, look!, listen!</b></p>
+<div class="formula">Chủ ngữ + am/is/are + động từ-<b>ing</b></div>
+<p>Nhận ra không? Nó dùng LẠI to be (Bài 1–2) làm trợ động từ, rồi thêm động từ đuôi -ing.</p>
+<table><tr><th>Chủ ngữ</th><th>to be</th><th>V-ing</th><th>Ví dụ</th></tr>
+<tr><td>I</td><td>am</td><td>working</td><td>I am working. (Tôi đang làm việc.)</td></tr>
+<tr><td>He/She/It</td><td>is</td><td>working</td><td>She is cooking. (Cô ấy đang nấu ăn.)</td></tr>
+<tr><td>You/We/They</td><td>are</td><td>working</td><td>They are playing. (Họ đang chơi.)</td></tr></table>
+<h3>2. Cách thêm -ing</h3>
+<table><tr><th>Trường hợp</th><th>Cách thêm</th><th>Ví dụ</th></tr>
+<tr><td>Đa số</td><td>+ ing</td><td>work → working, play → playing</td></tr>
+<tr><td>Tận cùng 'e' câm</td><td>bỏ e + ing</td><td>make → making, write → writing</td></tr>
+<tr><td>1 nguyên âm + 1 phụ âm (nhấn)</td><td>gấp đôi phụ âm + ing</td><td>run → running, sit → sitting, stop → stopping</td></tr></table>
+<h3>3. Phủ định & câu hỏi (giống to be!)</h3>
+<div class="example"><b>Phủ định:</b> She is not (isn't) working. — chỉ thêm 'not' sau to be.<br><b>Câu hỏi:</b> Are you working? — đảo to be lên đầu. → Yes, I am. / No, I'm not.</div>
+<h3>4. So sánh với hiện tại đơn — ĐỪNG NHẦM</h3>
+<div class="example"><b>I work at a store.</b> (hiện tại đơn)<br><span class="vi">Nghề nghiệp/thói quen — nói chung tôi làm ở cửa hàng. Không nói lúc này tôi đang làm gì.</span></div>
+<div class="example"><b>I am working now.</b> (tiếp diễn)<br><span class="vi">Ngay bây giờ tôi đang làm việc — hành động diễn ra tại thời điểm nói.</span></div>
+<p class="muted">⚠️ Một số động từ chỉ TRẠNG THÁI (không phải hành động) KHÔNG dùng tiếp diễn: like, love, want, know, understand, need. Nói "I want a coffee" — KHÔNG nói "I am wanting". Đây là điểm bẫy quan trọng.</p>`,
+levels:{
+basic:{mcq:[
+{q:"Look! It ___ raining.",opts:["is","are","am","be"],a:0,why:"<b>Đúng: is.</b> 'It' → is + raining. 'Look!' là dấu hiệu tiếp diễn (chỉ ra điều đang xảy ra ngay lúc này)."},
+{q:"They ___ watching TV now.",opts:["is","am","are","be"],a:2,why:"<b>Đúng: are.</b> 'They' → are + watching. 'now' xác nhận đây là tiếp diễn."},
+{q:"Dạng -ing đúng của 'run' là:",opts:["runing","running","runnning","runing"],a:1,why:"<b>Đúng: running.</b> 'run' = 1 nguyên âm (u) + 1 phụ âm (n) được nhấn → GẤP ĐÔI n = running. 'runing' thiếu 1 chữ n."},
+{q:"I ___ my report at the moment.",opts:["write","am writing","writing","writes"],a:1,why:"<b>Đúng: am writing.</b> 'at the moment' → tiếp diễn = am + writing (bỏ 'e' của write). 'write' là hiện tại đơn (thói quen), không hợp với 'at the moment'."},
+{q:"She ___ dinner right now.",opts:["cook","cooks","is cooking","cooking",],a:2,why:"<b>Đúng: is cooking.</b> 'right now' → tiếp diễn. 'is cooking'. 'cooks' là thói quen (She cooks every day), không hợp 'right now'."}],
+writing:[{q:"Nhìn quanh bạn ngay lúc này và viết 4 câu mô tả những gì đang xảy ra (dùng am/is/are + V-ing).",
+model:"<b>Bài mẫu:</b> I am sitting at my desk. My phone is charging. My colleagues are talking in the next room. The air conditioner is running.<br><b>Tự kiểm tra:</b> Mỗi câu có to be (am/is/are) đúng ngôi + động từ -ing? sitting (gấp đôi t), charging (bỏ e), running (gấp đôi n) — thêm -ing đúng quy tắc?"}]},
+mid:{mcq:[
+{q:"Chọn câu ĐÚNG:",opts:["I am wanting a new phone.","I want a new phone.","I wanting a new phone.","I am want a new phone."],a:1,why:"<b>Đúng: B.</b> 'want' là động từ chỉ TRẠNG THÁI → KHÔNG dùng tiếp diễn, dù có nghĩa 'đang muốn'. Phải dùng hiện tại đơn 'I want'. Đây là bẫy rất phổ biến."},
+{q:"'Why ___ you ___ at me like that?'",opts:["do / looking","are / looking","is / looking","are / look"],a:1,why:"<b>Đúng: are / looking.</b> Câu hỏi tiếp diễn: from 'You are looking' → đảo 'Are you looking' → thêm Why. Động từ giữ -ing."},
+{q:"He usually ___ the bus, but today he ___ his motorbike.",opts:["takes / is riding","is taking / rides","takes / rides","is taking / is riding"],a:0,why:"<b>Đúng: takes / is riding.</b> 'usually' → thói quen = hiện tại đơn 'takes'. 'today' (khác lệ thường) → tiếp diễn 'is riding'. Một câu phân biệt rõ hai thì."},
+{q:"Dạng -ing đúng của 'make' là:",opts:["makeing","making","makking","makin"],a:1,why:"<b>Đúng: making.</b> 'make' tận cùng 'e' câm → BỎ e rồi thêm ing = making. 'makeing' giữ e là lỗi phổ biến."},
+{q:"'The customers ___ for the manager right now.'",opts:["wait","waits","are waiting","is waiting"],a:2,why:"<b>Đúng: are waiting.</b> 'right now' → tiếp diễn; 'customers' số nhiều → are. 'is waiting' sai số."}],
+writing:[{q:"Viết đoạn 5–6 câu mô tả một bức ảnh chụp cửa hàng bạn vào giờ cao điểm (mọi người đang làm gì) — dùng tiếp diễn, và 1 câu tương phản với thói quen (usually) dùng hiện tại đơn.",
+model:"<b>Bài mẫu:</b> In this photo, the store is very busy. Two customers are looking at televisions, and a salesperson is explaining the features. My colleague is processing a payment at the counter. Outside, a delivery driver is unloading some boxes. We usually close at 9 p.m., but tonight we are staying open later for a promotion.<br><b>Tự kiểm tra:</b> Câu tiếp diễn có to be + V-ing? Câu 'usually' chuyển sang hiện tại đơn đúng? Không dùng tiếp diễn với động từ trạng thái?"}]},
+adv:{mcq:[
+{q:"'I ___ you're right — I hadn't thought of it that way.' (Tôi đang nghĩ/thấy rằng bạn đúng)",opts:["am thinking","think","am think","thinks"],a:1,why:"<b>Đúng: think.</b> Khi 'think' mang nghĩa Ý KIẾN/QUAN ĐIỂM → động từ trạng thái → hiện tại đơn. (Chỉ khi 'think' nghĩa 'đang suy nghĩ về việc gì' mới dùng tiếp diễn: 'I'm thinking about my future'.) Sắc thái nghĩa quyết định thì."},
+{q:"Câu nào dùng tiếp diễn để diễn tả điều PHIỀN LÒNG/lặp đi lặp lại (với 'always')?",opts:["He always is late.","He is always complaining about the prices.","He always complains once.","He is complain always."],a:1,why:"<b>Đúng: B.</b> 'always + tiếp diễn' diễn tả thói quen GÂY KHÓ CHỊU: 'He is always complaining' (Anh ta cứ phàn nàn suốt). Đây là cách dùng nâng cao của tiếp diễn, thể hiện thái độ — hữu ích cho Speaking."},
+{q:"'The company ___ increasingly ___ on online sales this year.'",opts:["is / relying","relies","are / relying","is / rely"],a:0,why:"<b>Đúng: is / relying.</b> Tiếp diễn diễn tả XU HƯỚNG đang thay đổi quanh hiện tại (this year): 'is relying increasingly'. 'relies' (hiện tại đơn) diễn tả sự thật cố định, không nêu được sự thay đổi. Cách dùng này rất hay trong IELTS Writing về xu hướng."},
+{q:"Chọn câu tự nhiên nhất cho IELTS Speaking khi mô tả cuộc sống hiện tại:",opts:["Now I live in Ha Noi and I am studying English at a center.","Now I am living in Ha Noi and I study English always.","I am live in Ha Noi now.","I living in Ha Noi and studying."],a:0,why:"<b>Đúng: A.</b> 'live' (tình trạng khá ổn định) dùng hiện tại đơn; 'am studying' (hoạt động tạm thời, đang diễn ra giai đoạn này) dùng tiếp diễn — kết hợp đúng sắc thái. B đảo ngược sai; C, D thiếu/sai to be."},
+{q:"'These days, more people ___ from home.' (Dạo này ngày càng nhiều người làm việc tại nhà)",opts:["work","works","are working","is working"],a:2,why:"<b>Đúng: are working.</b> 'These days' + xu hướng đang diễn ra → tiếp diễn: 'are working'. 'people' số nhiều → are. Diễn tả thay đổi mang tính thời điểm hiện tại, khác 'people work' (sự thật chung chung)."}],
+writing:[{q:"Viết đoạn 6–7 câu (kiểu IELTS Speaking Part 1 'What are you doing these days?') mô tả những việc bạn ĐANG làm trong giai đoạn này của cuộc sống — kết hợp hiện tại đơn (sự thật ổn định) và tiếp diễn (việc tạm thời/xu hướng).",
+model:"<b>Bài mẫu:</b> These days, I am quite busy with both work and study. I work at an electronics store, but at the moment I am also learning English to improve my career. Every evening, I am practising grammar on a website I built for myself. My English is slowly getting better, though I still make mistakes. I am not focusing on speaking yet, but I plan to soon.<br><b>Tự kiểm tra:</b> Việc ổn định (work) → hiện tại đơn? Việc tạm thời/đang tiến triển (learning, practising, getting better) → tiếp diễn? Không dùng tiếp diễn với 'plan/want'?"}]}
+}},
+/* ============ BÀI 6 ============ */
+{id:"g6",title:"Bài 6 · Hiện tại đơn vs Tiếp diễn — phân biệt & tổng hợp",
+theory:`<h3>Bài này KHÔNG có kiến thức mới — mục tiêu là phân biệt thành thạo 2 thì đã học</h3>
+<p>Đây là ngã rẽ mà 90% người mới bị nhầm. Nắm chắc bài này, bạn đã vững nửa nền tảng ngữ pháp.</p>
+<h3>1. Bảng so sánh cốt lõi</h3>
+<table><tr><th></th><th>Hiện tại đơn</th><th>Hiện tại tiếp diễn</th></tr>
+<tr><td><b>Dùng cho</b></td><td>Thói quen, sự thật, lịch trình</td><td>Hành động đang xảy ra lúc nói / tạm thời</td></tr>
+<tr><td><b>Công thức</b></td><td>V (thêm s với he/she/it)</td><td>am/is/are + V-ing</td></tr>
+<tr><td><b>Dấu hiệu</b></td><td>every day, usually, always, often, never</td><td>now, right now, at the moment, Look!, today</td></tr>
+<tr><td><b>Ví dụ</b></td><td>She reads books. (nói chung cô ấy đọc sách)</td><td>She is reading. (lúc này đang đọc)</td></tr></table>
+<h3>2. Ba câu hỏi tự đặt để chọn đúng thì</h3>
+<ul>
+<li><b>Hành động này xảy ra NGAY BÂY GIỜ hay nói chung?</b> → bây giờ = tiếp diễn; nói chung = đơn.</li>
+<li><b>Có từ 'now/at the moment/Look!' không?</b> → có = tiếp diễn.</li>
+<li><b>Có từ 'every/usually/always/never' không?</b> → có = đơn.</li>
+</ul>
+<h3>3. Bẫy động từ trạng thái (nhắc lại — RẤT hay ra)</h3>
+<p>like, love, hate, want, need, know, understand, believe, prefer → LUÔN dùng hiện tại đơn, KHÔNG dùng -ing dù nghĩa 'đang'.</p>
+<div class="example"><b>Đúng:</b> I understand now. / <b>Sai:</b> I am understanding now.<br><b>Đúng:</b> She wants help. / <b>Sai:</b> She is wanting help.</div>
+<h3>4. Ví dụ đối chiếu sát nhau</h3>
+<div class="example"><b>My father works at a bank.</b> (nghề của bố — sự thật ổn định)<br><b>My father is working late tonight.</b> (tối nay đặc biệt — đang/tạm thời)</div>`,
+levels:{
+basic:{mcq:[
+{q:"I ___ to music every day.",opts:["listen","am listening","listens","listening"],a:0,why:"<b>Đúng: listen.</b> 'every day' → thói quen → hiện tại đơn. 'I' không thêm s."},
+{q:"Be quiet! The baby ___.",opts:["sleeps","is sleeping","sleep","sleeping"],a:1,why:"<b>Đúng: is sleeping.</b> 'Be quiet!' ngụ ý ngay lúc này → tiếp diễn. Ngữ cảnh (không phải chỉ từ khóa) cũng cho biết thì."},
+{q:"She ___ three languages.",opts:["is speaking","speaks","speak","speaking"],a:1,why:"<b>Đúng: speaks.</b> Biết nói 3 thứ tiếng = khả năng/sự thật ổn định → hiện tại đơn, không phải hành động đang diễn ra."},
+{q:"Where's Nam? — He ___ lunch in the kitchen.",opts:["has","is having","have","having"],a:1,why:"<b>Đúng: is having.</b> Đang ăn trưa lúc này → tiếp diễn. Lưu ý 'have' ở đây nghĩa 'ăn' (hành động) nên ĐƯỢC dùng -ing (khác 'have' nghĩa 'sở hữu' thì không)."},
+{q:"We usually ___ at 9, but today we ___ early.",opts:["close / are closing","are closing / close","close / close","closing / closing"],a:0,why:"<b>Đúng: close / are closing.</b> 'usually' → đơn (close); 'today' (đặc biệt) → tiếp diễn (are closing)."}],
+writing:[{q:"Với mỗi động từ sau, viết 2 câu — 1 câu hiện tại đơn (thói quen) và 1 câu tiếp diễn (đang xảy ra): work, eat, study.",
+model:"<b>Bài mẫu:</b> work — I work every weekday. / I am working on a report right now.<br>eat — She eats rice for lunch. / She is eating noodles at the moment.<br>study — They study English. / They are studying for a test now.<br><b>Tự kiểm tra:</b> Câu đơn có dấu hiệu thói quen? Câu tiếp diễn có to be + V-ing và dấu hiệu 'now/right now'?"}]},
+mid:{mcq:[
+{q:"Chọn câu ĐÚNG:",opts:["I am knowing the answer.","I know the answer.","I knowing the answer.","I am know the answer."],a:1,why:"<b>Đúng: B.</b> 'know' là động từ trạng thái → luôn hiện tại đơn, KHÔNG -ing. Bẫy trạng thái kinh điển."},
+{q:"'Listen! Someone ___ at the door.'",opts:["knocks","is knocking","knock","knocking"],a:1,why:"<b>Đúng: is knocking.</b> 'Listen!' → đang xảy ra → tiếp diễn. 'Someone' số ít → is."},
+{q:"'The sun ___ in the east. Look, it ___ now!'",opts:["is rising / rises","rises / is rising","rise / rising","rises / rises"],a:1,why:"<b>Đúng: rises / is rising.</b> Câu 1 = sự thật hiển nhiên → đơn (rises). Câu 2 'Look...now' = đang diễn ra → tiếp diễn (is rising). Cùng một hành động nhưng khác thì tùy ngữ cảnh."},
+{q:"'How ___ your English course ___?' — 'Great, I ___ a lot!'",opts:["does / go / learn","is / going / am learning","do / going / learning","is / go / learn"],a:1,why:"<b>Đúng: is / going / am learning.</b> 'How is it going?' (mọi việc thế nào) là cụm tiếp diễn cố định; 'I'm learning a lot' = quá trình đang diễn ra. Cả hai vế tiếp diễn."},
+{q:"'My brother ___ for a job. He ___ two interviews this week.'",opts:["looks / has","is looking / has","looks / is having","is looking / is having"],a:1,why:"<b>Đúng: is looking / has.</b> 'Đang tìm việc' (giai đoạn tạm thời) → tiếp diễn (is looking). 'has two interviews' — 'have' nghĩa sở hữu/lịch hẹn → trạng thái → hiện tại đơn. Câu bẫy phối hợp cả hai."}],
+writing:[{q:"Viết đoạn 6 câu về một người bạn: mô tả họ LÀ AI + thói quen (hiện tại đơn) và họ ĐANG làm gì trong giai đoạn này (tiếp diễn). Chú ý ít nhất 1 động từ trạng thái.",
+model:"<b>Bài mẫu:</b> My friend Vinh is a software developer. He usually works from home and codes every day. He loves technology and knows a lot about games. Right now, he is building a card game with me. These days, he is also learning about artificial intelligence. He wants to start his own company one day.<br><b>Tự kiểm tra:</b> loves, knows, wants (trạng thái) → hiện tại đơn dù nghĩa 'đang'? works/codes (thói quen) → đơn? is building / is learning (giai đoạn này) → tiếp diễn?"}]},
+adv:{mcq:[
+{q:"'Water ___ of hydrogen and oxygen.' (Nước bao gồm hydro và oxy)",opts:["is consisting","consists","consist","is consist"],a:1,why:"<b>Đúng: consists.</b> 'consist' là động từ trạng thái (bao gồm) → không dùng -ing dù mô tả cấu tạo. Cùng nhóm: contain, belong, resemble, seem. Điểm ngữ pháp band 7."},
+{q:"Trong IELTS Writing Task 1 (biểu đồ), câu nào ĐÚNG để mô tả xu hướng hiện tại đang tiếp diễn?",opts:["The number of users is rising steadily.","The number of users rise steadily.","The number of users are rising.","The number of user rises."],a:0,why:"<b>Đúng: A.</b> 'The number of users' → chủ ngữ chính là 'The number' (số ít) → is; xu hướng đang tiếp diễn → is rising. C sai số (dùng are); B thiếu s và sai thì; D sai 'user' (phải users)."},
+{q:"'I ___ this soup ___ delicious!' (Tôi thấy món súp này thật ngon — đang nếm)",opts:["am finding / is","find / is","am finding / are","find / are"],a:1,why:"<b>Đúng: find / is.</b> 'find' nghĩa 'cảm thấy/đánh giá' → trạng thái → hiện tại đơn (I find). 'this soup' số ít → is. Bẫy: hành động nếm đang diễn ra nhưng động từ 'find' (đánh giá) vẫn là trạng thái."},
+{q:"Vì sao câu 'More and more companies are adopting AI' TỐT hơn 'More and more companies adopt AI' khi nói về xu hướng?",opts:["Vì tiếp diễn luôn đúng hơn","Vì tiếp diễn nhấn mạnh sự THAY ĐỔI ĐANG DIỄN RA, phù hợp cụm 'more and more'","Vì hiện tại đơn sai ngữ pháp ở đây","Không có khác biệt"],a:1,why:"<b>Đúng: B.</b> 'more and more' báo hiệu quá trình thay đổi → tiếp diễn diễn tả đúng sắc thái 'đang ngày càng...'. Hiện tại đơn không sai ngữ pháp nhưng mất đi nghĩa 'đang tiến triển' — đây là lựa chọn tinh tế nâng band."},
+{q:"Chọn đoạn dùng thì CHÍNH XÁC nhất về sắc thái:",opts:["I live in Ha Noi. I work in sales. Currently, I learn English because I want to get a better job.","I am living in Ha Noi. I am working in sales. Currently, I am learning English because I am wanting a better job.","I live in Ha Noi and work in sales. Currently, I am learning English because I want a better job.","I living in Ha Noi. I working in sales. I learning English."],a:2,why:"<b>Đúng: C.</b> Tình trạng ổn định (live, work) → đơn; hoạt động tạm thời hiện tại (Currently... learning) → tiếp diễn; 'want' trạng thái → đơn. A dùng đơn cho 'learn' làm mất sắc thái 'đang'; B lạm dụng tiếp diễn và sai 'am wanting'; D thiếu to be."}],
+writing:[{q:"Viết đoạn tự giới thiệu hoàn chỉnh 8–10 câu (chuẩn IELTS Speaking Part 1) kết hợp NHUẦN NHUYỄN cả hai thì: bạn là ai, thói quen, việc đang làm giai đoạn này, sở thích. Sau đó gạch chân và ghi chú vì sao mỗi động từ dùng thì đó.",
+model:"<b>Bài mẫu:</b> My name is Hiệp, and I live in Bac Ninh. I work at an electronics store, where I handle sales and pricing. I usually start early and finish late, so my days are quite full. At the moment, though, I am learning English seriously because I want to take the IELTS exam. Every evening, I am practising on a website that I am building myself. I really enjoy the process, even though I sometimes feel tired. I believe consistent practice matters more than talent. Right now, I am focusing on grammar, and next I plan to improve my speaking.<br><b>Ghi chú thì:</b> live/work/handle/start/finish (thói quen, sự thật → đơn); am learning/am practising/am building/am focusing (giai đoạn này → tiếp diễn); want/enjoy/believe (trạng thái → đơn dù nghĩa 'đang').<br><b>Tự kiểm tra:</b> Bạn có nhầm chỗ nào giữa hai thì không? Có dùng -ing với động từ trạng thái không?"}]}
+}}
+];
+LESSONS.push(
+/* ============ BÀI 7 ============ */
+{id:"g7",title:"Bài 7 · Danh từ số nhiều (thêm s/es) & danh từ không đếm được",
+theory:`<h3>1. Vì sao quan trọng?</h3>
+<p>Số nhiều quyết định động từ chia thế nào (is/are, works/work). Sai số nhiều → sai cả câu. Đây cũng là lỗi bị trừ điểm âm thầm suốt Writing.</p>
+<h3>2. Quy tắc thêm s/es (giống thêm s cho động từ)</h3>
+<table><tr><th>Trường hợp</th><th>Cách</th><th>Ví dụ</th></tr>
+<tr><td>Đa số</td><td>+ s</td><td>book → books, phone → phones</td></tr>
+<tr><td>Tận cùng s, x, ch, sh, o</td><td>+ es</td><td>box → boxes, watch → watches, tomato → tomatoes</td></tr>
+<tr><td>Phụ âm + y</td><td>y → ies</td><td>city → cities, company → companies</td></tr>
+<tr><td>Nguyên âm + y</td><td>+ s</td><td>day → days, boy → boys</td></tr>
+<tr><td>Tận cùng f/fe</td><td>f → ves</td><td>knife → knives, leaf → leaves</td></tr></table>
+<h3>3. Số nhiều BẤT QUY TẮC (phải thuộc lòng)</h3>
+<table><tr><th>Số ít</th><th>Số nhiều</th></tr>
+<tr><td>man (đàn ông)</td><td>men</td></tr><tr><td>woman (phụ nữ)</td><td>women</td></tr>
+<tr><td>child (đứa trẻ)</td><td>children</td></tr><tr><td>person (người)</td><td>people</td></tr>
+<tr><td>foot (bàn chân)</td><td>feet</td></tr><tr><td>tooth (răng)</td><td>teeth</td></tr>
+<tr><td>fish / sheep</td><td>fish / sheep (không đổi)</td></tr></table>
+<h3>4. Danh từ KHÔNG đếm được (uncountable)</h3>
+<p>Một số thứ không đếm từng cái được → KHÔNG thêm s, luôn coi là số ít (dùng is):</p>
+<p><b>water, rice, money, information, advice, furniture, news, knowledge, work, coffee, milk.</b></p>
+<div class="example"><b>Đúng:</b> I need some information. / <b>Sai:</b> I need some informations.<br><b>Đúng:</b> The furniture is new. / <b>Sai:</b> The furnitures are new.</div>
+<p class="muted">⚠️ 'information, advice, furniture, news' là những từ người Việt hay thêm 's' nhất vì tiếng Việt đếm được. Nhớ: KHÔNG có 'informations', 'advices', 'furnitures'.</p>`,
+levels:{
+basic:{mcq:[
+{q:"Số nhiều của 'box' là:",opts:["boxs","boxes","boxies","box"],a:1,why:"<b>Đúng: boxes.</b> Tận cùng 'x' → thêm 'es'. 'boxs' sai vì sau x phải es."},
+{q:"Số nhiều của 'city' là:",opts:["citys","cities","cityes","city"],a:1,why:"<b>Đúng: cities.</b> Phụ âm 't' + 'y' → đổi y thành 'ies' = cities."},
+{q:"Số nhiều của 'child' là:",opts:["childs","childes","children","child"],a:2,why:"<b>Đúng: children.</b> Bất quy tắc — phải thuộc lòng. Không có 'childs'."},
+{q:"Câu nào ĐÚNG?",opts:["I have three informations.","I have some information.","I have some informations.","I have a information."],a:1,why:"<b>Đúng: B.</b> 'information' KHÔNG đếm được → không thêm s, không dùng 'a/three'. Dùng 'some information'."},
+{q:"There are five ___ in my family.",opts:["persons","people","peoples","person"],a:1,why:"<b>Đúng: people.</b> Số nhiều của 'person' là 'people' (bất quy tắc). 'persons' rất hiếm dùng; 'peoples' chỉ nghĩa 'các dân tộc'."}],
+writing:[{q:"Viết số nhiều đúng của 10 từ: book, watch, company, knife, man, tomato, day, woman, foot, party. Sau đó viết 1 câu với 3 trong số đó.",
+model:"<b>Đáp án:</b> books, watches, companies, knives, men, tomatoes, days, women, feet, parties.<br>Câu ví dụ: Two women are buying watches for three days.<br><b>Tự kiểm tra:</b> watch→es (sau ch), company→ies (phụ âm+y), knife→ves, man→men & woman→women (bất quy tắc), tomato→es (sau o), day→s (nguyên âm+y giữ nguyên), foot→feet."}]},
+mid:{mcq:[
+{q:"Chọn câu ĐÚNG:",opts:["The furnitures in the store are new.","The furniture in the store is new.","The furniture in the store are new.","The furnitures in the store is new."],a:1,why:"<b>Đúng: B.</b> 'furniture' không đếm được → không s, coi số ít → 'is'. Cả hai điều kiện phải đúng: không thêm s VÀ dùng is."},
+{q:"My ___ are hurting after walking all day.",opts:["foots","feets","feet","foot"],a:2,why:"<b>Đúng: feet.</b> Số nhiều bất quy tắc của foot = feet (không 'foots' hay 'feets')."},
+{q:"'The news ___ very good today.'",opts:["are","is","were","have"],a:1,why:"<b>Đúng: is.</b> 'news' có 's' nhưng là danh từ KHÔNG đếm được, luôn số ít → is. Bẫy thị giác kinh điển."},
+{q:"How many ___ work in your department?",opts:["peoples","person","people","persons"],a:2,why:"<b>Đúng: people.</b> 'How many' cần danh từ đếm được số nhiều → people. Động từ 'work' (không s) cũng xác nhận chủ ngữ số nhiều."},
+{q:"She gave me some good ___ about my career.",opts:["advices","advice","advise","an advice"],a:1,why:"<b>Đúng: advice.</b> 'advice' không đếm được → không s, không 'an'. ('advise' là ĐỘNG TỪ, viết khác.)"}],
+writing:[{q:"Viết đoạn 5 câu về cửa hàng của bạn, dùng ít nhất 4 danh từ số nhiều (đếm được) và 2 danh từ không đếm được (money, information, furniture...).",
+model:"<b>Bài mẫu:</b> Our store sells many products, including televisions, refrigerators, and washing machines. We have three salespeople and two technicians. Customers often ask for information about warranties. We also sell some furniture, like sofas and tables. The store makes good money during holidays.<br><b>Tự kiểm tra:</b> Danh từ đếm được số nhiều (products, televisions, salespeople) có s/bất quy tắc đúng? Danh từ không đếm (information, furniture, money) KHÔNG có s?"}]},
+adv:{mcq:[
+{q:"'The data ___ collected from 500 participants.'",opts:["was","were","is being","are being"],a:1,why:"<b>Đúng: were.</b> Trong văn phong học thuật, 'data' là số NHIỀU (số ít: datum) → were/are. Đây là quy ước band 7+ trong IELTS Writing khoa học. (Văn nói hằng ngày dần chấp nhận 'data is', nhưng academic writing nên dùng số nhiều.)"},
+{q:"Chọn cụm SAI:",opts:["a piece of advice","two pieces of furniture","three luggages","a glass of water"],a:2,why:"<b>Đúng (sai): three luggages.</b> 'luggage' không đếm được → không thêm s. Muốn đếm phải dùng 'pieces of luggage'. Các cụm 'a piece of advice', 'pieces of furniture' là cách đếm danh từ không đếm được đúng chuẩn."},
+{q:"'A number of students ___ absent, but the number of absentees ___ small.'",opts:["is / are","are / is","is / is","are / are"],a:1,why:"<b>Đúng: are / is.</b> 'A number of + danh từ số nhiều' = nhiều → are. 'The number of...' = con số (bản thân nó) → số ít → is. Cặp cấu trúc dễ nhầm, hay ra ở band cao."},
+{q:"Trong Writing Task 1, cách diễn đạt nào ĐÚNG?",opts:["The amount of people increased.","The number of people increased.","The number of people increase.","The amounts of people increased."],a:1,why:"<b>Đúng: B.</b> 'people' đếm được → dùng 'number of' (không phải 'amount of', vốn dành cho danh từ KHÔNG đếm được như money, water). 'increased' đúng số ít theo 'The number'."},
+{q:"Câu nào không có lỗi danh từ?",opts:["I bought two new furnitures and some equipments.","The research provides useful evidences.","Staff are required to wear uniforms.","She has many knowledges about electronics."],a:2,why:"<b>Đúng: C.</b> 'Staff' (tập thể nhân viên) đi với 'are' hợp lệ; 'uniforms' đếm được → có s. A sai (furniture, equipment không đếm được); B sai ('evidence' không đếm); D sai ('knowledge' không đếm). Ba từ evidence/equipment/knowledge là bẫy phổ biến."}],
+writing:[{q:"Viết đoạn 6–7 câu (kiểu mô tả xu hướng IELTS) dùng chính xác cả danh từ đếm được số nhiều lẫn không đếm được, gồm ít nhất: number of, amount of, và 2 danh từ không đếm được học thuật (information, research, equipment, evidence).",
+model:"<b>Bài mẫu:</b> In recent years, the number of online shoppers has risen sharply. A growing amount of information about products is now available on the internet. Research shows that customers rely heavily on reviews before buying electronics. Many stores have invested in new equipment to process orders faster. However, there is little evidence that traditional shops will disappear completely. Overall, both the number of customers and the amount of data collected continue to grow.<br><b>Tự kiểm tra:</b> 'number of' + đếm được số nhiều? 'amount of' + không đếm? information/research/equipment/evidence KHÔNG có s và đi với động từ số ít?"}]}
+}},
+/* ============ BÀI 8 ============ */
+{id:"g8",title:"Bài 8 · Mạo từ a / an / the",
+theory:`<h3>1. a / an — "một" (dùng cho danh từ đếm được SỐ ÍT, lần đầu nhắc đến)</h3>
+<p><b>a</b> đứng trước từ bắt đầu bằng PHỤ ÂM: a book, a car, a phone.<br><b>an</b> đứng trước từ bắt đầu bằng NGUYÊN ÂM (a, e, i, o, u): an apple, an hour, an engineer.</p>
+<p class="muted">Quan trọng: xét ÂM đọc, không phải chữ viết. 'hour' viết bằng h nhưng đọc /aʊə/ (âm nguyên âm) → an hour. 'university' viết u nhưng đọc /juː/ (âm 'y') → a university.</p>
+<h3>2. the — "cái đó cụ thể" (cả người nói và người nghe đều biết đang nói về cái nào)</h3>
+<table><tr><th>Dùng 'a/an' khi</th><th>Dùng 'the' khi</th></tr>
+<tr><td>Lần đầu nhắc đến</td><td>Đã nhắc rồi, nhắc lại</td></tr>
+<tr><td>I bought <b>a</b> phone.</td><td><b>The</b> phone is great.</td></tr>
+<tr><td>Bất kỳ cái nào</td><td>Cái duy nhất / cụ thể</td></tr></table>
+<div class="example"><b>I saw a dog. The dog was barking.</b><br><span class="vi">Lần đầu: 'a dog' (một con chó nào đó). Lần hai: 'the dog' (chính con chó vừa nhắc).</span></div>
+<h3>3. the với những thứ DUY NHẤT</h3>
+<p>the sun, the moon, the world, the internet, the same — vì chỉ có một.</p>
+<h3>4. KHÔNG dùng mạo từ khi</h3>
+<ul>
+<li>Nói chung về danh từ số nhiều: <b>Dogs</b> are loyal. (Chó thì trung thành — nói chung mọi con chó)</li>
+<li>Danh từ không đếm được nói chung: <b>Water</b> is essential.</li>
+<li>Tên riêng, tên người, hầu hết tên quốc gia/thành phố: Vietnam, Ha Noi, Hiệp.</li>
+</ul>
+<p class="muted">⚠️ Đây là điểm KHÓ nhất với người Việt vì tiếng Việt không có mạo từ. Đừng nản — quy tắc cơ bản là: đếm được + số ít + lần đầu → a/an; cụ thể/đã biết → the; nói chung số nhiều → không mạo từ.</p>`,
+levels:{
+basic:{mcq:[
+{q:"I need ___ pen to write.",opts:["a","an","the","(không)"],a:0,why:"<b>Đúng: a.</b> 'pen' bắt đầu bằng phụ âm /p/, đếm được số ít, nhắc lần đầu bất kỳ cây bút nào → a."},
+{q:"She is ___ engineer.",opts:["a","an","the","(không)"],a:1,why:"<b>Đúng: an.</b> 'engineer' bắt đầu bằng nguyên âm /e/ → an. Nghề nghiệp số ít cần a/an."},
+{q:"Look at ___ moon tonight!",opts:["a","an","the","(không)"],a:2,why:"<b>Đúng: the.</b> Mặt trăng là DUY NHẤT → the moon. Những thứ chỉ có một luôn dùng the."},
+{q:"I bought a laptop. ___ laptop is very fast.",opts:["A","An","The","(không)"],a:2,why:"<b>Đúng: The.</b> Lần đầu 'a laptop', lần hai nhắc lại chính nó → The laptop. Người nghe giờ đã biết cái nào."},
+{q:"___ are popular pets. (Chó là thú cưng phổ biến — nói chung)",opts:["A dog","The dog","Dogs","The dogs"],a:2,why:"<b>Đúng: Dogs.</b> Nói CHUNG về loài chó → danh từ số nhiều KHÔNG mạo từ. 'The dogs' ám chỉ những con chó cụ thể nào đó."}],
+writing:[{q:"Điền a/an/the/(không) và viết lại 4 câu: (1) I have ___ car. ___ car is red. (2) ___ sun is hot. (3) She is ___ honest person. (4) ___ books are expensive (nói chung).",
+model:"<b>Đáp án:</b> (1) I have a car. The car is red. (lần đầu a, nhắc lại the) (2) The sun is hot. (duy nhất) (3) She is an honest person. ('honest' đọc /ɒnɪst/, h câm → âm nguyên âm → an) (4) Books are expensive. (nói chung số nhiều → không mạo từ)<br><b>Tự kiểm tra:</b> Câu 3 bạn có bị 'a honest' không? Nhớ xét ÂM: h câm → an."}]},
+mid:{mcq:[
+{q:"He studies at ___ university in Ha Noi.",opts:["a","an","the","(không)"],a:0,why:"<b>Đúng: a.</b> 'university' viết bằng 'u' nhưng ĐỌC /juːnɪ.../ bắt đầu bằng âm 'y' (phụ âm) → a university. Bẫy chữ viết vs âm đọc."},
+{q:"It takes ___ hour to get there.",opts:["a","an","the","(không)"],a:1,why:"<b>Đúng: an.</b> 'hour' có h CÂM, đọc /aʊə/ bắt đầu bằng nguyên âm → an hour. Ngược với 'university'."},
+{q:"___ information you gave me was helpful.",opts:["A","An","The","(không)"],a:2,why:"<b>Đúng: The.</b> Dù 'information' không đếm được (không dùng a/an), vẫn dùng 'the' khi nói về thông tin CỤ THỂ đã được đưa. Không đếm được vẫn có thể đi với the."},
+{q:"Chọn câu ĐÚNG:",opts:["Money is important in the life.","Money is important in life.","The money is important in a life.","A money is important in life."],a:1,why:"<b>Đúng: B.</b> 'Money' (không đếm, nói chung) và 'life' (nói chung) đều KHÔNG mạo từ. 'in life' = trong cuộc sống nói chung là cụm cố định. A thừa 'the'; C, D sai với danh từ không đếm."},
+{q:"My father works as ___ manager. (một người quản lý — nghề nghiệp, nhắc lần đầu)",opts:["a","an","the","(không)"],a:0,why:"<b>Đúng: a.</b> 'manager' bắt đầu bằng phụ âm /m/, là nghề nghiệp đếm được số ít nhắc lần đầu → a. Quy tắc: nói nghề của ai đó luôn cần a/an (He is a doctor, She is an engineer)."},
+],
+writing:[{q:"Viết đoạn 6 câu kể về một lần mua sắm: giới thiệu món đồ (a/an lần đầu), nhắc lại nó (the), và 1 câu nói chung về loại sản phẩm đó (không mạo từ số nhiều).",
+model:"<b>Bài mẫu:</b> Last week, I bought a new television. The television has a huge screen and excellent sound. I also got a soundbar to go with it. The soundbar was on sale, so I saved some money. In general, televisions are getting cheaper every year. I think good electronics are worth the investment.<br><b>Tự kiểm tra:</b> Lần đầu dùng a (a television, a soundbar)? Nhắc lại dùng the? Câu nói chung 'televisions/electronics' số nhiều không mạo từ?"}]},
+adv:{mcq:[
+{q:"'___ rich should help ___ poor.' (Người giàu nên giúp người nghèo)",opts:["A / a","The / the","(không) / (không)","The / a"],a:1,why:"<b>Đúng: The / the.</b> 'the + tính từ' = cả một NHÓM người: the rich (những người giàu), the poor, the elderly, the unemployed. Cấu trúc học thuật hữu ích cho Writing xã hội."},
+{q:"'She plays ___ piano beautifully, and she wants to be ___ professional musician.'",opts:["the / a","a / the","the / the","a / a"],a:0,why:"<b>Đúng: the / a.</b> Nhạc cụ dùng 'the': play the piano/guitar/violin. Nghề nghiệp số ít lần đầu: a musician. Hai quy tắc khác nhau trong một câu."},
+{q:"Câu nào ĐÚNG về mạo từ trong văn học thuật?",opts:["The nature is beautiful.","Nature is beautiful.","A nature is beautiful.","The natures are beautiful."],a:1,why:"<b>Đúng: B.</b> 'Nature' (thiên nhiên nói chung, khái niệm trừu tượng) KHÔNG mạo từ. 'The nature' chỉ dùng khi nghĩa 'bản chất của cái gì' (the nature of the problem). Lỗi 'the nature is beautiful' rất phổ biến."},
+{q:"'___ number of tourists visiting ___ Vietnam has increased.'",opts:["A / the","The / (không)","The / the","A / (không)"],a:1,why:"<b>Đúng: The / (không).</b> 'The number of' (cụm cố định, dùng the). Tên quốc gia 'Vietnam' KHÔNG mạo từ (trừ vài ngoại lệ như the USA, the UK, the Philippines). Kết hợp hai quy tắc."},
+{q:"Chọn câu KHÔNG có lỗi mạo từ:",opts:["I go to the work by the bus.","Internet has changed a society.","The unemployment is a serious problem in many countries.","The government should invest more in education and healthcare."],a:3,why:"<b>Đúng: D.</b> 'The government' (cụ thể, dùng the) + 'education/healthcare' (khái niệm chung, không mạo từ) — chuẩn. A thừa the (go to work, by bus là cụm cố định không mạo từ); B thiếu the ('The internet') và thừa a; C thừa the ('Unemployment' nói chung không mạo từ)."}],
+writing:[{q:"Viết đoạn văn nghị luận ngắn 7–8 câu về một vấn đề xã hội (giáo dục, môi trường, hoặc công nghệ), chú ý dùng mạo từ chuẩn học thuật: khái niệm chung (không mạo từ), nhóm người (the + adj), danh từ cụ thể (the), cụm 'the number of'.",
+model:"<b>Bài mẫu:</b> Education plays a vital role in the development of any country. The government should ensure that the poor have equal access to good schools. In recent years, the number of students attending university has risen significantly. However, technology is changing the way people learn. The internet now allows students to study online from home. In my opinion, both traditional schools and online platforms are important. Society benefits when knowledge is available to everyone.<br><b>Tự kiểm tra:</b> Education/technology/society/knowledge (khái niệm chung) → không mạo từ? the government/the internet/the poor → the? 'the number of' đúng? Không thừa 'the' trước khái niệm trừu tượng?"}]}
+}}
+);
+LESSONS.push(
+/* ============ BÀI 9 ============ */
+{id:"g9",title:"Bài 9 · There is / There are (có...)",
+theory:`<h3>1. Dùng để nói "CÓ cái gì đó ở đâu đó"</h3>
+<p>Tiếng Việt: "CÓ một cái tivi trong phòng". Tiếng Anh dùng cấu trúc <b>There is / There are</b>.</p>
+<div class="formula"><b>There is</b> + danh từ SỐ ÍT / không đếm được<br><b>There are</b> + danh từ SỐ NHIỀU</div>
+<table><tr><th>Câu</th><th>Nghĩa</th></tr>
+<tr><td>There is a TV in the room.</td><td>Có một cái tivi trong phòng.</td></tr>
+<tr><td>There are three shops on this street.</td><td>Có ba cửa hàng trên phố này.</td></tr>
+<tr><td>There is some water in the bottle.</td><td>Có một ít nước trong chai. (không đếm → is)</td></tr></table>
+<p class="muted">Lưu ý: 'There' ở đây KHÔNG có nghĩa 'ở đó'. Nó chỉ là từ mở đầu cấu trúc. Nghĩa 'có' nằm ở 'is/are'.</p>
+<h3>2. Phủ định & câu hỏi</h3>
+<div class="example"><b>Phủ định:</b> There isn't a lift. (Không có thang máy.) / There aren't any chairs. (Không có cái ghế nào.)<br><b>Câu hỏi:</b> Is there a bank near here? — Yes, there is. / No, there isn't.<br>Are there any restaurants? — Yes, there are. / No, there aren't.</div>
+<h3>3. some / any đi kèm</h3>
+<ul>
+<li><b>some</b> dùng trong câu khẳng định: There are some books.</li>
+<li><b>any</b> dùng trong câu phủ định và câu hỏi: There aren't any books. / Are there any books?</li>
+</ul>
+<h3>4. Chia theo danh từ ĐẦU TIÊN sau đó</h3>
+<div class="example"><b>There is a table and four chairs.</b><br><span class="vi">Danh từ ngay sau 'There' là 'a table' (số ít) → dùng 'is', dù phía sau có 'four chairs'.</span></div>`,
+levels:{
+basic:{mcq:[
+{q:"___ a book on the table.",opts:["There is","There are","There am","Have"],a:0,why:"<b>Đúng: There is.</b> 'a book' số ít → There is. Tiếng Anh không nói 'Have a book on the table' để diễn tả 'có'."},
+{q:"___ five people in the meeting.",opts:["There is","There are","There be","It is"],a:1,why:"<b>Đúng: There are.</b> 'five people' số nhiều → There are."},
+{q:"There ___ some milk in the fridge.",opts:["is","are","am","be"],a:0,why:"<b>Đúng: is.</b> 'milk' không đếm được → luôn số ít → There is."},
+{q:"Câu phủ định: 'There ___ any chairs here.'",opts:["isn't","aren't","not","doesn't"],a:1,why:"<b>Đúng: aren't.</b> 'chairs' số nhiều → aren't. Và dùng 'any' trong câu phủ định."},
+{q:"'___ there a pharmacy near here?'",opts:["Is","Are","Do","Does"],a:0,why:"<b>Đúng: Is.</b> 'a pharmacy' số ít → Is there...? Câu hỏi đảo is lên trước there."}],
+writing:[{q:"Viết 5 câu mô tả những gì có trong phòng làm việc của bạn (dùng cả There is và There are, ít nhất 1 câu phủ định).",
+model:"<b>Bài mẫu:</b> There is a large desk in my office. There are two computers on it. There is some paper in the drawer. There are many products on the shelves. There isn't a window, so it can feel a bit dark.<br><b>Tự kiểm tra:</b> Số ít/không đếm → There is? Số nhiều → There are? Câu phủ định dùng isn't/aren't + any?"}]},
+mid:{mcq:[
+{q:"There ___ a sofa and two armchairs in the living room.",opts:["is","are","be","have"],a:0,why:"<b>Đúng: is.</b> Chia theo danh từ ĐẦU TIÊN 'a sofa' (số ít) → is, dù sau đó có 'two armchairs'. Quy tắc quan trọng."},
+{q:"'Are there ___ good restaurants around here?'",opts:["some","any","a","much"],a:1,why:"<b>Đúng: any.</b> Câu HỎI dùng 'any', không dùng 'some'. 'a' sai vì 'restaurants' số nhiều."},
+{q:"There ___ a lot of information on this website.",opts:["is","are","be","were"],a:0,why:"<b>Đúng: is.</b> 'information' không đếm được → is, dù 'a lot of' nghe như nhiều. Chia theo tính chất danh từ, không theo 'a lot'."},
+{q:"Chọn câu ĐÚNG:",opts:["There are a problem with the delivery.","There is a problem with the delivery.","There have a problem with the delivery.","It has a problem with the delivery."],a:1,why:"<b>Đúng: B.</b> 'a problem' số ít → There is. Người Việt hay dùng 'There have' (dịch từ 'có') — SAI, phải dùng There is/are."},
+{q:"'How many stores ___ there in the mall?'",opts:["is","are","do","does"],a:1,why:"<b>Đúng: are.</b> 'How many stores' số nhiều → are there. Câu hỏi số lượng với danh từ đếm được số nhiều."}],
+writing:[{q:"Viết đoạn 6 câu mô tả khu vực quanh cửa hàng/nhà bạn (có gì gần đó): ngân hàng, quán ăn, trường học... Dùng đa dạng There is/are, phủ định, và some/any đúng.",
+model:"<b>Bài mẫu:</b> There are many shops on my street. There is a big supermarket next to my store. There are two coffee shops nearby, which are always busy. However, there isn't a hospital in this area. There are some parking spaces, but there aren't any on weekends. Overall, there is everything you need within walking distance.<br><b>Tự kiểm tra:</b> is/are đúng theo số? some (khẳng định) vs any (phủ định)? Không dùng 'There have'?"}]},
+adv:{mcq:[
+{q:"Trong Writing Task 1/2, cách diễn đạt nào TRANG TRỌNG hơn 'There are many people who think that...'?",opts:["There is many people thinking...","Many people believe that... / It is widely believed that...","There are much people who think...","There have many people think..."],a:1,why:"<b>Đúng: B.</b> 'There is/are' hơi thiếu trang trọng khi lạm dụng trong essay. Câu học thuật ưa 'Many people believe' hoặc bị động 'It is widely believed'. Biết dùng There is/are ĐÚNG nhưng cũng biết khi nào nên thay bằng cấu trúc mạnh hơn."},
+{q:"'There ___ little evidence to support this claim.'",opts:["is","are","be","were"],a:0,why:"<b>Đúng: is.</b> 'evidence' không đếm được → is. 'little' (rất ít) đi với danh từ không đếm được. Cụm 'There is little evidence' rất hữu ích cho lập luận học thuật."},
+{q:"'There ___ a number of factors that ___ to this problem.'",opts:["is / contribute","are / contribute","is / contributes","are / contributes"],a:1,why:"<b>Đúng: are / contribute.</b> 'a number of factors' = nhiều yếu tố → are. 'factors' (số nhiều) làm chủ ngữ của mệnh đề quan hệ → contribute (không s). Câu tổng hợp nhiều quy tắc."},
+{q:"Chọn câu tự nhiên và chính xác nhất:",opts:["There is no doubt that education is important.","There is not any doubt that education is important.","There isn't no doubt about education important.","It has no doubt that education is important."],a:0,why:"<b>Đúng: A.</b> 'There is no doubt that...' — cụm nhấn mạnh học thuật rất mạnh (Không còn nghi ngờ gì rằng...). B đúng nhưng kém trang trọng hơn; C phủ định kép sai; D dùng 'It has' sai cấu trúc."},
+{q:"'Nowhere ___ such a variety of products.' (Không nơi nào có nhiều loại sản phẩm đến vậy)",opts:["there is","is there","there are","are there"],a:1,why:"<b>Đúng: is there.</b> Trạng từ phủ định 'Nowhere' đầu câu → ĐẢO NGỮ: is there (thay vì there is). 'a variety of' → số ít → is. Đây là cấu trúc band 7+, nhưng gốc rễ vẫn là There is bạn học hôm nay."}],
+writing:[{q:"Viết đoạn nghị luận 7 câu về một vấn đề (ví dụ: lợi ích của công nghệ), dùng There is/are một cách đa dạng VÀ ít nhất 1 lần thay bằng cấu trúc học thuật mạnh hơn (Many people believe / It is clear that / There is no doubt that).",
+model:"<b>Bài mẫu:</b> There is no doubt that technology has transformed modern life. There are many benefits, especially in communication and education. For example, there are countless online courses that allow people to learn new skills for free. However, there are also concerns about screen addiction. Many people believe that children spend too much time on their phones. There is little evidence, though, that technology alone causes these problems. It is clear that balance is the key.<br><b>Tự kiểm tra:</b> There is/are chia đúng số? Có ít nhất 1 cấu trúc thay thế trang trọng (There is no doubt / Many people believe / It is clear)?"}]}
+}},
+/* ============ BÀI 10 ============ */
+{id:"g10",title:"Bài 10 · Sở hữu: 's, of, và tính từ sở hữu (my/your/his...)",
+theory:`<h3>1. Tính từ sở hữu — "của ai" đứng trước danh từ</h3>
+<table><tr><th>Chủ ngữ</th><th>Tính từ sở hữu</th><th>Ví dụ</th></tr>
+<tr><td>I</td><td>my (của tôi)</td><td>my phone</td></tr>
+<tr><td>You</td><td>your (của bạn)</td><td>your car</td></tr>
+<tr><td>He</td><td>his (của anh ấy)</td><td>his job</td></tr>
+<tr><td>She</td><td>her (của cô ấy)</td><td>her bag</td></tr>
+<tr><td>It</td><td>its (của nó)</td><td>its price</td></tr>
+<tr><td>We</td><td>our (của chúng tôi)</td><td>our store</td></tr>
+<tr><td>They</td><td>their (của họ)</td><td>their orders</td></tr></table>
+<p class="muted">⚠️ Phân biệt: <b>its</b> (của nó, sở hữu) ≠ <b>it's</b> (= it is). Và <b>their</b> (của họ) ≠ <b>there</b> (có/ở đó) ≠ <b>they're</b> (= they are). Ba từ 'there/their/they're' đọc giống nhau nhưng nghĩa khác — lỗi rất phổ biến.</p>
+<h3>2. 's — sở hữu của NGƯỜI/động vật</h3>
+<div class="formula">Người + <b>'s</b> + vật sở hữu</div>
+<div class="example"><b>Nam's phone</b> = điện thoại của Nam<br><b>my sister's car</b> = xe của chị tôi<br><b>the manager's office</b> = văn phòng của quản lý</div>
+<p>Nếu danh từ đã có 's' số nhiều → chỉ thêm dấu ' : <b>the students' books</b> (sách của các học sinh).</p>
+<h3>3. of — sở hữu của VẬT</h3>
+<div class="example"><b>the price of the TV</b> = giá của cái tivi (KHÔNG nói 'the TV's price' — vật thường dùng 'of')<br><b>the name of the company</b> = tên của công ty<br><b>the end of the month</b> = cuối tháng</div>
+<h3>4. Đại từ sở hữu — thay thế cả cụm (mine, yours, his, hers, ours, theirs)</h3>
+<div class="example"><b>This phone is mine.</b> (= my phone)<br><b>That car is theirs.</b> (= their car)<br><span class="vi">Dùng khi không muốn lặp lại danh từ.</span></div>`,
+levels:{
+basic:{mcq:[
+{q:"This is ___ book. (của tôi)",opts:["me","my","mine","I"],a:1,why:"<b>Đúng: my.</b> 'my' + danh từ (my book). 'mine' đứng một mình (This book is mine). 'me' là tân ngữ, 'I' là chủ ngữ."},
+{q:"___ car is very fast. (của anh ấy)",opts:["He","His","Him","He's"],a:1,why:"<b>Đúng: His.</b> 'his' + danh từ = xe của anh ấy. 'He's' = He is (khác nghĩa)."},
+{q:"That is ___ phone. (của Lan)",opts:["Lan","Lans","Lan's","Lans'"],a:2,why:"<b>Đúng: Lan's.</b> Sở hữu của người → tên + 's = Lan's phone."},
+{q:"Chọn cách nói đúng: 'giá của cái tivi'",opts:["the TV's price","the price of the TV","the price's TV","TV of price"],a:1,why:"<b>Đúng: the price of the TV.</b> Vật (TV) thường dùng 'of' để chỉ sở hữu, không dùng 's. ('the TV's price' nghe không tự nhiên.)"},
+{q:"The dog wagged ___ tail. (đuôi của nó)",opts:["it's","its","his","their"],a:1,why:"<b>Đúng: its.</b> 'its' = của nó (sở hữu). 'it's' = it is (SAI ở đây). Đây là lỗi chính tả bị trừ điểm rất nhiều."}],
+writing:[{q:"Viết 5 câu về đồ vật của các thành viên gia đình, dùng: tính từ sở hữu (my/his/her), 's của người, và of với vật.",
+model:"<b>Bài mẫu:</b> My father's car is old but reliable. Her phone is newer than mine. The color of my house is blue. My sister's laptop is broken. Their store is bigger than ours.<br><b>Tự kiểm tra:</b> Người → 's (father's, sister's)? Vật → of (color of my house)? my/her/their + danh từ đúng? Không nhầm its/it's?"}]},
+mid:{mcq:[
+{q:"The ___ toys are all over the floor. (đồ chơi của những đứa trẻ)",opts:["children's","childrens'","childrens","children"],a:0,why:"<b>Đúng: children's.</b> 'children' đã là số nhiều bất quy tắc (không có 's') → thêm 's bình thường: children's. Khác với danh từ số nhiều có sẵn 's (students' books)."},
+{q:"Chọn câu ĐÚNG:",opts:["Their going to the store.","There going to the store.","They're going to the store.","Theyre going to the store."],a:2,why:"<b>Đúng: They're.</b> = They are going. 'Their' = của họ (sở hữu), 'There' = có/ở đó. Ba từ đồng âm khác nghĩa — chọn theo NGHĨA câu."},
+{q:"Is this pen ___ or ___? (của bạn / của tôi)",opts:["your / my","yours / mine","your / mine","yours / my"],a:1,why:"<b>Đúng: yours / mine.</b> Đứng CUỐI câu, không có danh từ theo sau → dùng đại từ sở hữu: yours, mine (không phải your, my)."},
+{q:"'the results ___ the survey' (kết quả của cuộc khảo sát)",opts:["'s","of","from","by"],a:1,why:"<b>Đúng: of.</b> Vật/khái niệm (survey) → 'the results of the survey'. Không dùng 's cho vật vô tri."},
+{q:"My colleagues finished ___ reports early.",opts:["there","their","they're","theirs"],a:1,why:"<b>Đúng: their.</b> 'their' + reports = báo cáo của họ (sở hữu + danh từ). 'theirs' đứng một mình, 'there/they're' sai nghĩa."}],
+writing:[{q:"Viết đoạn 6 câu so sánh cửa hàng của bạn với đối thủ, dùng: tính từ sở hữu, đại từ sở hữu (ours/theirs), 's, và of. Chú ý dùng đúng its/it's và their/there/they're.",
+model:"<b>Bài mẫu:</b> Our store is smaller than our competitor's, but our service is better. Their prices are sometimes lower, yet the quality of their products is not always good. My manager's strategy focuses on customer trust. I believe that's why our customers stay loyal. Their location is nearby, but ours is easier to find. In the end, each store has its own strengths.<br><b>Tự kiểm tra:</b> our/their + danh từ? ours/theirs đứng cuối? competitor's/manager's (người → 's)? quality OF products (vật → of)? 'its own' (không phải it's)?"}]},
+adv:{mcq:[
+{q:"Chọn cách diễn đạt tự nhiên nhất: 'phòng ngủ của con gái người hàng xóm của tôi'",opts:["my neighbour's daughter's bedroom","the bedroom of the daughter of my neighbour","my neighbour daughter bedroom","the my neighbour's daughter bedroom"],a:0,why:"<b>Đúng: A.</b> Chuỗi sở hữu của người dùng 's liên tiếp: my neighbour's daughter's bedroom. B đúng ngữ pháp nhưng dài dòng, kém tự nhiên. Người bản ngữ ưu tiên 's cho chuỗi sở hữu người."},
+{q:"'Vietnam___ economy has grown rapidly.' (Nền kinh tế của Việt Nam)",opts:["Vietnam economy","Vietnam's economy","Vietnams economy","economy of Vietnam's"],a:1,why:"<b>Đúng: Vietnam's economy.</b> Tên quốc gia/tổ chức được coi như 'người' → dùng 's: Vietnam's economy, the company's profit. Đây là ngoại lệ hữu ích: một số vật/nơi 'quan trọng' (quốc gia, tổ chức, thời gian) dùng được 's."},
+{q:"'a ___ delay' và 'two ___ holiday' (sự chậm trễ 1 tuần / kỳ nghỉ 2 tuần)",opts:["week's / weeks'","weeks' / week's","week / weeks","week's / weeks"],a:0,why:"<b>Đúng: week's / weeks'.</b> Thời gian dùng sở hữu: a week's delay (1 tuần → week's), two weeks' holiday (2 tuần → weeks'). Cấu trúc 'time + 's' ít người biết nhưng rất chuẩn."},
+{q:"Chọn câu KHÔNG có lỗi:",opts:["Its important to check it's battery.","It's important to check its battery.","Its important to check its battery.","It's important to check it's battery."],a:1,why:"<b>Đúng: B.</b> 'It's important' = It is important (cần it's). 'its battery' = pin của nó (sở hữu, cần its). Câu này kiểm tra bạn phân biệt được cả hai trong cùng một câu — lỗi its/it's là một trong những lỗi bị chú ý nhất."},
+{q:"Trong Writing, cụm nào diễn đạt sở hữu học thuật tốt nhất cho 'tác động của mạng xã hội lên giới trẻ'?",opts:["social media's impact on the youth","the impact of social media on young people","social media impact to young people","the young people's social media impact"],a:1,why:"<b>Đúng: B.</b> 'the impact of X on Y' — cấu trúc học thuật chuẩn (of chỉ sở hữu cho khái niệm, on chỉ đối tượng chịu tác động). A dùng 's cho vật trừu tượng (chấp nhận được nhưng kém trang trọng hơn); C sai giới từ (impact ON, không to)."}],
+writing:[{q:"Viết đoạn nghị luận 7–8 câu về ảnh hưởng của một yếu tố (mạng xã hội / công nghệ / giáo dục) lên một nhóm người, dùng chính xác: 'the impact/effect of X on Y', sở hữu 's cho người/tổ chức, of cho khái niệm, và không mắc lỗi its/it's, their/there.",
+model:"<b>Bài mẫu:</b> The impact of social media on young people is a topic of great debate. Many parents worry about their children's screen time and its effect on mental health. A company's responsibility is not only to make profit but also to protect its users. There is growing pressure on the government to regulate these platforms. The government's role, however, remains unclear. In my view, the benefits of technology outweigh its risks if used wisely. Society's future depends on how we balance progress and well-being.<br><b>Tự kiểm tra:</b> 'the impact/effect of ... on ...' đúng? children's/company's/government's/society's (người & tổ chức → 's)? its (sở hữu) vs it's? their (sở hữu) vs there? benefits OF technology (khái niệm → of)?"}]}
+}}
+);
+/* ================= BÀI KIỂM TRA TỔNG HỢP ================= */
+const TESTS=[
+{id:"t1",title:"Kiểm tra 1 — TO BE (Bài 1–2)",desc:"10 câu · am/is/are, phủ định, câu hỏi",
+ qs:[
+ {q:"We ___ colleagues.",opts:["am","is","are","be"],a:2,skill:"tobe",why:"'We' số nhiều → are."},
+ {q:"He ___ a technician.",opts:["am","is","are","be"],a:1,skill:"tobe",why:"'He' số ít → is."},
+ {q:"___ you ready?",opts:["Is","Am","Are","Do"],a:2,skill:"question",why:"'you' → Are, đảo lên đầu thành câu hỏi."},
+ {q:"She ___ not at home now.",opts:["is","are","am","do"],a:0,skill:"neg",why:"'She' → is; phủ định thêm not sau is."},
+ {q:"What ___ your phone number?",opts:["are","is","am","do"],a:1,skill:"question",why:"'your phone number' số ít → is. What is..."},
+ {q:"They ___ from Hai Phong.",opts:["is","am","are","be"],a:2,skill:"tobe",why:"'They' → are."},
+ {q:"Trả lời đúng cho 'Are you tired?' (có):",opts:["Yes, I'm.","Yes, I am.","Yes, I are.","Yes, am I."],a:1,skill:"question",why:"Trả lời Yes dùng dạng đầy đủ 'Yes, I am' — không viết tắt."},
+ {q:"My parents ___ very supportive.",opts:["is","am","are","be"],a:2,skill:"tobe",why:"'My parents' số nhiều → are."},
+ {q:"Chọn câu ĐÚNG:",opts:["The store not open.","The store isn't open.","The store don't open.","The store aren't open."],a:1,skill:"neg",why:"'The store' → is; phủ định isn't. C dùng don't (chỉ cho động từ thường); A thiếu to be."},
+ {q:"___ this your bag?",opts:["Are","Is","Am","Do"],a:1,skill:"question",why:"'this' số ít → Is this...?"}]},
+{id:"t2",title:"Kiểm tra 2 — Hiện tại đơn & tiếp diễn (Bài 3–6)",desc:"12 câu · chia động từ, do/does, V-ing, phân biệt 2 thì",
+ qs:[
+ {q:"She ___ at a bank.",opts:["work","works","working","is work"],a:1,skill:"present",why:"'She' → works (thêm s)."},
+ {q:"I ___ coffee.",opts:["doesn't like","don't like","not like","am not like"],a:1,skill:"negq",why:"'I' → don't + like (nguyên mẫu)."},
+ {q:"___ he speak English?",opts:["Do","Does","Is","Are"],a:1,skill:"negq",why:"'he' → Does + speak (nguyên mẫu)."},
+ {q:"Look! The bus ___.",opts:["comes","is coming","come","coming"],a:1,skill:"continuous",why:"'Look!' → tiếp diễn = is coming."},
+ {q:"My father ___ to work by motorbike every day.",opts:["go","goes","going","is going"],a:1,skill:"present",why:"'every day' + he → hiện tại đơn 'goes' (go+es)."},
+ {q:"They ___ a meeting right now.",opts:["have","has","are having","is having"],a:2,skill:"continuous",why:"'right now' + they → are having."},
+ {q:"Chọn câu ĐÚNG:",opts:["I am wanting a coffee.","I want a coffee.","I wanting a coffee.","I wants a coffee."],a:1,skill:"stative",why:"'want' là động từ trạng thái → hiện tại đơn, không -ing."},
+ {q:"He ___ meat because he's a vegetarian.",opts:["don't eat","doesn't eat","doesn't eats","not eat"],a:1,skill:"negq",why:"'He' → doesn't + eat (nguyên mẫu, không eats)."},
+ {q:"Water ___ at 100°C.",opts:["boil","boils","is boiling","boiling"],a:1,skill:"present",why:"Sự thật hiển nhiên → hiện tại đơn; water=it → boils."},
+ {q:"'What ___ you ___ these days?' (dạo này đang làm gì)",opts:["do / do","are / doing","is / doing","do / doing"],a:1,skill:"continuous",why:"'these days' → tiếp diễn: are you doing."},
+ {q:"My sister ___ English but she ___ Chinese.",opts:["speaks / doesn't speak","speak / don't speak","speaks / don't speak","is speaking / doesn't speak"],a:0,skill:"present",why:"'she' → speaks (khẳng định); doesn't speak (phủ định, nguyên mẫu)."},
+ {q:"Chọn câu ĐÚNG về chia động từ:",opts:["My parents works hard.","My parents work hard.","My parents working hard.","My parents is work hard."],a:1,skill:"present",why:"'My parents' số nhiều → work (KHÔNG thêm s)."}]},
+{id:"t3",title:"Kiểm tra 3 — Danh từ, mạo từ, there is/are, sở hữu (Bài 7–10)",desc:"12 câu · số nhiều, a/an/the, there is/are, 's & of",
+ qs:[
+ {q:"Số nhiều của 'company':",opts:["companys","companies","companyes","company"],a:1,skill:"plural",why:"Phụ âm + y → ies: companies."},
+ {q:"I need some ___ about this product.",opts:["information","informations","an information","informations'"],a:0,skill:"uncountable",why:"'information' không đếm được → không s."},
+ {q:"She is ___ honest woman.",opts:["a","an","the","(không)"],a:1,skill:"article",why:"'honest' h câm, đọc âm nguyên âm → an."},
+ {q:"___ sun is very bright today.",opts:["A","An","The","(không)"],a:2,skill:"article",why:"Mặt trời duy nhất → the."},
+ {q:"___ a new phone on the table.",opts:["There is","There are","There have","It is"],a:0,skill:"there",why:"'a new phone' số ít → There is."},
+ {q:"___ many customers in the store.",opts:["There is","There are","There have","Have"],a:1,skill:"there",why:"'many customers' số nhiều → There are."},
+ {q:"This is ___ car. (của họ)",opts:["there","their","they're","theirs"],a:1,skill:"possessive",why:"'their' + car = xe của họ (sở hữu + danh từ)."},
+ {q:"'giá của cái tivi' dịch đúng là:",opts:["the TV's price","the price of the TV","price of TV's","the TV price of"],a:1,skill:"possessive",why:"Vật → dùng of: the price of the TV."},
+ {q:"Số nhiều của 'child':",opts:["childs","children","childes","childrens"],a:1,skill:"plural",why:"Bất quy tắc: children."},
+ {q:"The dog is wagging ___ tail.",opts:["it's","its","his","their"],a:1,skill:"possessive",why:"'its' = của nó (sở hữu). 'it's' = it is (sai)."},
+ {q:"There ___ some milk in the fridge.",opts:["is","are","have","be"],a:0,skill:"there",why:"'milk' không đếm được → is."},
+ {q:"He studies at ___ university.",opts:["a","an","the","(không)"],a:0,skill:"article",why:"'university' đọc /juː/ âm phụ âm 'y' → a."}]}
+];
+const SKILL_NAMES={tobe:"TO BE (am/is/are)",neg:"Phủ định to be",question:"Câu hỏi to be",present:"Hiện tại đơn - chia động từ",negq:"Phủ định/câu hỏi (do/does)",continuous:"Hiện tại tiếp diễn",stative:"Động từ trạng thái",plural:"Danh từ số nhiều",uncountable:"Danh từ không đếm được",article:"Mạo từ a/an/the",there:"There is/are",possessive:"Sở hữu ('s / of / my)"};
+/* ================= UI ENGINE ================= */
+const app=document.getElementById('app');
+function go(v,arg){document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.v===v));
+ if(v==='home')renderHome();if(v==='lessons')renderLessons(arg);if(v==='tests')renderTests(arg);if(v==='progress')renderProgress();window.scrollTo(0,0)}
+
+function c1Percent(){let done=0;const tot=LESSONS.length*3;
+ LESSONS.forEach(l=>['basic','mid','adv'].forEach(lv=>{const s=progress.scores[l.id+'_'+lv];if(s&&s.correct/s.total>=0.6)done++}));
+ return{done,tot,pct:Math.round(done/tot*100)}}
+
+function progSVG(pct){const r=62,cx=75,cy=75,circ=2*Math.PI*r;
+ return `<svg class="dial" viewBox="0 0 150 150">
+ <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#DDE2DA" stroke-width="12"/>
+ <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#0E7C86" stroke-width="12" stroke-linecap="round"
+  stroke-dasharray="${circ}" stroke-dashoffset="${circ*(1-pct/100)}" transform="rotate(-90 ${cx} ${cy})"/>
+ <text x="75" y="72" text-anchor="middle" font-size="28" font-weight="700" fill="#17263B" font-family="Fraunces,serif">${pct}%</text>
+ <text x="75" y="92" text-anchor="middle" font-size="10" fill="#4A5A70">Chặng 1</text></svg>`}
+
+function renderHome(){
+ const p=c1Percent();
+ app.innerHTML=`
+ <div class="card"><div class="eyebrow">Lộ trình tự học · 0 → IELTS 9.0</div>
+ <h2>Chào Hiệp — bắt đầu từ nền tảng vững</h2>
+ <div class="dial-wrap">${progSVG(p.pct)}
+ <div class="legend"><p>Bạn đã hoàn thành <b>${p.done}/${p.tot}</b> mục bài tập của Chặng 1.</p>
+ <p class="muted">Mỗi bài có lý thuyết tiếng Việt chi tiết → ví dụ giải thích → bài tập 3 cấp độ tự chấm → giải thích vì sao đúng/sai. Học tuần tự từ Bài 1.</p>
+ <button class="btn" onclick="go('lessons')">Vào học Bài 1 →</button></div></div></div>
+
+ <div class="card"><h2>Toàn bộ lộ trình (7 chặng)</h2>
+ ${ROADMAP.map((s,i)=>`<div class="stage${s.open?'':' locked'}"><b>${s.n}</b> ${s.open?'<span class="pill ok">ĐANG HỌC</span>':'<span class="pill">sắp mở</span>'}<br><span class="muted">${s.g}</span></div>`).join('')}
+ <p class="muted">Website xây theo từng chặng để mỗi phần đủ dày và học được thật. Học xong Chặng 1, mình sẽ bổ sung Chặng 2 vào cùng file — bạn chỉ cần thay file mới trên GitHub, tiến độ vẫn được giữ.</p></div>
+
+ <div class="card"><h2>Chặng 1 gồm 10 bài — đi từng bước nhỏ</h2>
+ <div class="lesson-list">${LESSONS.map((l,i)=>{const done=['basic','mid','adv'].filter(lv=>progress.scores[l.id+'_'+lv]).length;
+  return `<button class="lesson-item" onclick="go('lessons',{id:'${l.id}'})">${l.title}<span class="done">${done?done+'/3 ✓':''}</span></button>`}).join('')}</div></div>
+
+ <div class="card"><h2>Cách học hiệu quả nhất</h2>
+ <ul><li><b>Học đúng thứ tự</b> Bài 1 → 10. Mỗi bài chỉ 1 điểm ngữ pháp, có nhắc lại bài trước.</li>
+ <li><b>Làm đủ 3 cấp độ</b> mỗi bài. Cơ bản để hiểu, Trung bình để vững, Nâng cao để hướng thẳng tới tiêu chí IELTS.</li>
+ <li><b>Đọc kỹ giải thích cả khi đúng</b> — phần "vì sao đáp án khác sai" chứa các bẫy thi thật.</li>
+ <li><b>Bài tự luận: VIẾT RA THẬT</b> vào ô nhập (tự lưu), rồi mới mở bài mẫu đối chiếu.</li>
+ <li><b>Sau mỗi 2–3 bài</b>, làm 1 Bài kiểm tra để xem điểm yếu.</li></ul></div>`;
+}
+
+function renderLessons(sel){
+ if(sel){renderLesson(sel.id,sel.lv||'basic');return}
+ app.innerHTML=`<div class="card"><div class="eyebrow">Chặng 1 · Ngữ pháp nền tảng</div><h2>10 bài học</h2>
+ <div class="lesson-list">${LESSONS.map(l=>{const done=['basic','mid','adv'].filter(lv=>progress.scores[l.id+'_'+lv]).length;
+  return `<button class="lesson-item" onclick="go('lessons',{id:'${l.id}'})">${l.title}<span class="done">${done?done+'/3 ✓':''}</span></button>`}).join('')}</div></div>`;
+}
+
+let cur={quiz:null};
+function renderLesson(id,lv){
+ const l=LESSONS.find(x=>x.id===id);if(!l){renderLessons();return}
+ const data=l.levels[lv];cur.quiz={lessonId:id,lv,answers:{},submitted:false};
+ const lvName={basic:'Cơ bản',mid:'Trung bình',adv:'Nâng cao'};
+ const idx=LESSONS.findIndex(x=>x.id===id);
+ app.innerHTML=`<div class="card"><div class="eyebrow">Bài ${idx+1}/${LESSONS.length} · Chặng 1</div>
+ <h2>${l.title}</h2>${l.theory}</div>
+ <div class="card"><h2>Bài tập thực hành</h2>
+ <div class="tabs">${['basic','mid','adv'].map(x=>{const s=progress.scores[id+'_'+x];
+  return `<button class="${x===lv?'active':''}" onclick="renderLesson('${id}','${x}')">${lvName[x]}${s?' · '+s.correct+'/'+s.total:''}</button>`}).join('')}</div>
+ <h3>A. Trắc nghiệm</h3><p class="muted">Chọn đáp án cho tất cả các câu, rồi nhấn Nộp bài để xem điểm và giải thích.</p>
+ <div id="quiz">${data.mcq.map((q,i)=>`<div class="q"><div class="stem">Câu ${i+1}. ${q.q}</div>
+  ${q.opts.map((o,j)=>`<button class="opt" id="o${i}_${j}" onclick="pick(${i},${j})">${String.fromCharCode(65+j)}. ${o}</button>`).join('')}
+  <div class="expl" id="e${i}">${q.why}</div></div>`).join('')}</div>
+ <button class="btn" id="submitBtn" onclick="submitQuiz()">Nộp bài & xem giải thích</button>
+ <div id="quizResult"></div>
+ <h3>B. Tự luận</h3><p class="muted">Viết câu trả lời của bạn TRƯỚC, sau đó mới mở bài mẫu để tự đối chiếu.</p>
+ ${data.writing.map((w,i)=>`<div class="q"><div class="stem">${w.q}</div>
+  <textarea id="w${i}" placeholder="Viết câu trả lời của bạn ở đây...">${(progress.essays[id+'_'+lv+'_'+i]||'')}</textarea>
+  <button class="btn ghost" onclick="saveEssay('${id}','${lv}',${i})">Lưu bài viết</button>
+  <button class="btn gold" onclick="document.getElementById('m${i}').classList.add('show')">Xem bài mẫu & cách tự chấm</button>
+  <div class="model" id="m${i}">${w.model}</div></div>`).join('')}
+ <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+ ${idx>0?`<button class="btn ghost" onclick="go('lessons',{id:'${LESSONS[idx-1].id}'})">← Bài trước</button>`:''}
+ <button class="btn ghost" onclick="go('lessons')">Danh sách bài</button>
+ ${idx<LESSONS.length-1?`<button class="btn" onclick="go('lessons',{id:'${LESSONS[idx+1].id}'})">Bài tiếp theo →</button>`:''}
+ </div></div>`;
+}
+function pick(i,j){if(cur.quiz.submitted)return;cur.quiz.answers[i]=j;
+ const l=LESSONS.find(x=>x.id===cur.quiz.lessonId);
+ l.levels[cur.quiz.lv].mcq[i].opts.forEach((_,k)=>document.getElementById('o'+i+'_'+k).classList.toggle('sel',k===j))}
+function submitQuiz(){
+ const q=cur.quiz,l=LESSONS.find(x=>x.id===q.lessonId),mcq=l.levels[q.lv].mcq;
+ if(Object.keys(q.answers).length<mcq.length){alert('Bạn còn '+(mcq.length-Object.keys(q.answers).length)+' câu chưa chọn.');return}
+ q.submitted=true;let c=0;
+ mcq.forEach((m,i)=>{const sel=q.answers[i];document.getElementById('o'+i+'_'+m.a).classList.add('right');
+  if(sel===m.a)c++;else document.getElementById('o'+i+'_'+sel).classList.add('wrong');
+  document.getElementById('e'+i).classList.add('show')});
+ progress.scores[q.lessonId+'_'+q.lv]={correct:c,total:mcq.length,date:new Date().toISOString().slice(0,10)};saveP();
+ const pct=c/mcq.length,cls=pct>=0.8?'good':pct>=0.5?'mid':'low';
+ const msg=pct>=0.8?'Xuất sắc! Bạn đã nắm chắc phần này.':pct>=0.5?'Khá tốt. Đọc kỹ giải thích các câu sai rồi thử lại sau vài ngày.':'Chưa đạt — hãy đọc lại lý thuyết và toàn bộ giải thích, rồi làm lại trước khi sang bài mới.';
+ document.getElementById('quizResult').innerHTML=`<div class="result ${cls}">Kết quả: ${c}/${mcq.length} (${Math.round(pct*100)}%) — ${msg}</div>`;
+ document.getElementById('submitBtn').disabled=true;
+}
+function saveEssay(id,lv,i){progress.essays[id+'_'+lv+'_'+i]=document.getElementById('w'+i).value;saveP();
+ const b=event.target;const t=b.textContent;b.textContent='✓ Đã lưu';setTimeout(()=>b.textContent=t,1500)}
+
+function renderTests(sel){
+ if(sel){renderTest(sel);return}
+ app.innerHTML=`<div class="card"><div class="eyebrow">Đánh giá</div><h2>Bài kiểm tra tổng hợp</h2>
+ <p class="muted">Làm không xem lại bài học. Sau khi nộp, hệ thống tự chấm, giải thích từng câu và chỉ ra điểm ngữ pháp bạn còn yếu.</p>
+ ${TESTS.map(t=>{const s=progress.tests[t.id];
+ return `<button class="lesson-item" onclick="go('tests','${t.id}')"><b>${t.title}</b><br><span class="muted">${t.desc}</span><span class="done">${s?s.correct+'/'+s.total+' ✓':''}</span></button>`}).join('')}</div>`;
+}
+let curTest=null;
+function renderTest(id){
+ const t=TESTS.find(x=>x.id===id);curTest={id,answers:{},submitted:false};
+ app.innerHTML=`<div class="card"><div class="eyebrow">Kiểm tra tổng hợp</div><h2>${t.title}</h2>
+ ${t.qs.map((q,i)=>`<div class="q"><div class="stem">Câu ${i+1}. ${q.q}</div>
+  ${q.opts.map((o,j)=>`<button class="opt" id="to${i}_${j}" onclick="tpick(${i},${j})">${String.fromCharCode(65+j)}. ${o}</button>`).join('')}
+  <div class="expl" id="te${i}"><b>Giải thích:</b> ${q.why}</div></div>`).join('')}
+ <button class="btn" id="tSubmit" onclick="submitTest()">Nộp bài kiểm tra</button>
+ <div id="testResult"></div>
+ <button class="btn ghost" onclick="go('tests')" style="margin-top:10px">← Danh sách kiểm tra</button></div>`;
+}
+function tpick(i,j){if(curTest.submitted)return;curTest.answers[i]=j;
+ TESTS.find(x=>x.id===curTest.id).qs[i].opts.forEach((_,k)=>document.getElementById('to'+i+'_'+k).classList.toggle('sel',k===j))}
+function submitTest(){
+ const t=TESTS.find(x=>x.id===curTest.id);
+ if(Object.keys(curTest.answers).length<t.qs.length){alert('Bạn còn câu chưa chọn.');return}
+ curTest.submitted=true;let c=0;const sc={},st={};
+ t.qs.forEach((q,i)=>{st[q.skill]=(st[q.skill]||0)+1;document.getElementById('to'+i+'_'+q.a).classList.add('right');
+  if(curTest.answers[i]===q.a){c++;sc[q.skill]=(sc[q.skill]||0)+1}else document.getElementById('to'+i+'_'+curTest.answers[i]).classList.add('wrong');
+  document.getElementById('te'+i).classList.add('show')});
+ progress.tests[t.id]={correct:c,total:t.qs.length,skills:Object.fromEntries(Object.keys(st).map(k=>[k,{c:sc[k]||0,t:st[k]}])),date:new Date().toISOString().slice(0,10)};saveP();
+ const pct=c/t.qs.length,cls=pct>=0.8?'good':pct>=0.5?'mid':'low';
+ const rows=Object.keys(st).map(k=>{const r=(sc[k]||0)/st[k];
+  return `<tr><td>${SKILL_NAMES[k]||k}</td><td>${sc[k]||0}/${st[k]}</td><td class="${r>=0.75?'strong':'weak'}">${r>=0.75?'Ổn':'CẦN ÔN'}</td></tr>`}).join('');
+ document.getElementById('testResult').innerHTML=`<div class="result ${cls}">Điểm: ${c}/${t.qs.length} (${Math.round(pct*100)}%)</div>
+ <h3>Phân tích điểm yếu</h3><table><tr><th>Điểm ngữ pháp</th><th>Đúng</th><th>Đánh giá</th></tr>${rows}</table>
+ <p class="muted">Với mục "CẦN ÔN": quay lại đúng bài học đó, đọc lại lý thuyết và làm lại cấp độ Trung bình + Nâng cao.</p>`;
+ document.getElementById('tSubmit').disabled=true;
+}
+
+function renderProgress(){
+ const p=c1Percent();
+ const rows=LESSONS.map((l,i)=>{const cells=['basic','mid','adv'].map(lv=>{const s=progress.scores[l.id+'_'+lv];
+   return s?`<td class="${s.correct/s.total>=0.75?'strong':'weak'}">${s.correct}/${s.total}</td>`:'<td class="muted">—</td>'}).join('');
+  return `<tr><td>Bài ${i+1}. ${l.title.replace(/^Bài \d+ · /,'')}</td>${cells}</tr>`}).join('');
+ const testRows=TESTS.map(t=>{const s=progress.tests[t.id];
+  return `<tr><td>${t.title}</td><td>${s?s.correct+'/'+s.total+' ('+s.date+')':'Chưa làm'}</td></tr>`}).join('');
+ const agg={};TESTS.forEach(t=>{const s=progress.tests[t.id];if(!s||!s.skills)return;
+  Object.entries(s.skills).forEach(([k,v])=>{agg[k]=agg[k]||{c:0,t:0};agg[k].c+=v.c;agg[k].t+=v.t})});
+ const weak=Object.entries(agg).filter(([k,v])=>v.c/v.t<0.75).map(([k])=>SKILL_NAMES[k]||k);
+ const allDone=p.done===p.tot;
+ app.innerHTML=`<div class="card"><div class="eyebrow">Tự theo dõi</div><h2>Tiến độ Chặng 1</h2>
+ <div class="dial-wrap">${progSVG(p.pct)}<div class="legend">
+ <p>Hoàn thành <b>${p.done}/${p.tot}</b> mục (mỗi bài 3 cấp độ, đạt ≥60% mới tính).</p>
+ ${allDone?'<p class="strong">🎉 Bạn đã hoàn thành Chặng 1! Sẵn sàng cho Chặng 2 (quá khứ, tương lai, so sánh). Nhắn mình để mở chặng tiếp theo.</p>':'<p class="muted">Hoàn thành cả 10 bài (mọi ô xanh) trước khi sang Chặng 2 để nền tảng thật vững.</p>'}
+ </div></div></div>
+ ${weak.length?`<div class="card"><h2>⚠️ Điểm ngữ pháp cần củng cố</h2><p>Qua các bài kiểm tra, bạn còn yếu ở: <b class="weak">${weak.join(', ')}</b>. Hãy ôn lại các bài tương ứng.</p></div>`:''}
+ <div class="card"><h2>Chi tiết theo bài</h2>
+ <table><tr><th>Bài học</th><th>Cơ bản</th><th>TB</th><th>Nâng cao</th></tr>${rows}</table>
+ <p class="muted">Mục tiêu: mọi ô ≥ 75% (xanh). Ô đỏ = làm lại sau khi ôn lý thuyết.</p></div>
+ <div class="card"><h2>Kết quả kiểm tra tổng hợp</h2>
+ <table><tr><th>Bài</th><th>Điểm</th></tr>${testRows}</table></div>
+ <div class="card"><button class="btn ghost" onclick="if(confirm('Xóa toàn bộ tiến độ Chặng 1? Không thể hoàn tác.')){progress={scores:{},tests:{},essays:{}};saveP();renderProgress()}">Đặt lại tiến độ</button></div>`;
+}
+renderHome();
+</script>
+</body>
+</html>
